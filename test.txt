@@ -1,0 +1,1000 @@
+   42  ls
+   43  vi module_kpp_redhc_made_soa_vbs_aq_Update_Rconst.F 
+   44  vimdiff module_kpp_redhc_made_soa_vbs_aq_Update_Rconst.F ../../rap-chem/WRF-BrC/chem/module_kpp_redhc_made_soa_vbs_aq_Update_Rconst.F 
+   45  vimdiff module_kpp_redhc_made_soa_vbs_interface.F 
+   46  vi ../errors_comp.txt 
+   47  cd ..
+   48  ls
+   49  cd ..
+   50  ls
+   51  cd rap-chem/
+   52  ls
+   53  cd WRF-brcabsa
+   54  ls
+   55  d WRF-brcabs/
+   56  ls
+   57  cd WRF-brcabs/
+   58  ls
+   59  cd chem/
+   60  ls
+   61  cd ..
+   62  ls
+   63  pwd
+   64  ./clean -a
+   65  ls
+   66  cd chem/
+   67  ls
+   68  cd ..
+   69  ls
+   70  vi errors_comp.txt 
+   71  ls -rlt
+   72  ls -lrt
+   73  cds
+   74  ls
+   75  cd WRF46-
+   76  ls
+   77  cd WRF46-
+   78  ls
+   79  cd WRF46-minsu/
+   80  ls
+   81  ls -lrt
+   82  vi errors_comp.txt 
+   83  cd ../rap-chem/WRF-BrC/
+   84  ls
+   85  cd chem/
+   86  ls
+   87  grep -i AER_SRF_AREA
+   88  grep -i "AER_SRF_AREA" *.F
+   89  cd ../..
+   90  ls
+   91  cd WRF-brcabs/
+   92  ls
+   93  cd chem/
+   94  ls
+   95  grep -i "AER_SRF_AREA" *.F
+   96  ls
+   97  cd ..
+   98  grep -ir "AER_SRF_AREA" *
+   99  cd ../../WRF46-minsu/
+  100  grep -ir "AER_SRF_AREA" *
+  101  vi chem/KPP/kpp/kpp-2.1/src/gen.c 
+  102  vimdiff chem/KPP/kpp/kpp-2.1/src/gen.c ../rap-chem/WRF-brcabs/chem/KPP/kpp/kpp-2.1/src/gen.c 
+  103  cd chem/KPP/
+  104  ls
+  105  cd kpp/
+  106  ls
+  107  cd kpp-2.1/
+  108  ls
+  109  cd src
+  110  ls
+  111  vi Makefile 
+  112  ls
+  113  ls -lrt
+  114  cd ..
+  115  ls
+  116  cd models/
+  117  ls
+  118  cd ..
+  119  pwd
+  120  cd ..
+  121  ls
+  122  cd ..
+  123  ls
+  124  grep -ir "redhc_" .
+  125  cd mechanisms/
+  126  ls
+  127  ls -rlt
+  128  cd redhc_made_soa_vbs
+  129  ls
+  130  ls -rlt
+  131  vi Makefile
+  132  ls ../../../../../rap-chem/WRF-brcabs/chem/KPP/mechanisms/redhc_made_soa_vbs/* -ll
+  133  cd ../../../../../rap-chem/WRF-brcabs/chem/KPP/mechanisms/
+  134  ls
+  135  cd redhc_made_soa_vbs
+  136  ls
+  137  ls -rlt
+  138  cd ..
+  139  ls
+  140  cd racm_soa_vbs
+  141  ls
+  142  ls -rlt
+  143  cds
+  144  ls
+  145  cd WRF46-
+  146  cd WRF46-minsu/
+  147  ls
+  148  cd chem/KPP/
+  149  ls
+  150  cd mechanisms/
+  151  ls
+  152  cd redhc_made_soa_vbs
+  153  ls
+  154  cd ../racm_soa_vbs
+  155  ls
+  156  vi Makefile
+  157  cd ..
+  158  ls
+  159  ls -rlt
+  160  cd racm_soa_vbs
+  161  ls
+  162  vi Makefile_racm_soa_vbs 
+  163  cd ..
+  164  ls
+  165  cd redhc_made_soa_vbs
+  166  ls
+  167  vi Makefile_redhc_made_soa_vbs 
+  168  vi atoms_red 
+  169  cd ..
+  170  ls
+  171  cd ..
+  172  ls
+  173  cd util/
+  174  ls
+  175  cd write_decomp/
+  176  ls
+  177  cd ../wkc/
+  178  ls
+  179  pwd
+  180  cds
+  181  ls
+  182  cd rap-chem/WRF-brcabs/chem/
+  183  ls
+  184  cd KPP/
+  185  ls
+  186  cd util/
+  187  ls
+  188  grep -ir "redhc_" .
+  189  cd ..
+  190  ls
+  191  cd mechanisms/
+  192  ls
+  193  pwd
+  194  cd redhc_made_soa_vbs
+  195  ls
+  196  cd ..
+  197  ls
+  198  cd ..
+  199  ls
+  200  cd ..
+  201  ls
+  202  grep -ir "AER_SRF_AREA" *
+  203  pwd
+  204  vKPP/kpp/kpp-2.1/src/gen.c
+  205  cds
+  206  ls
+  207  cd WRF46-minsu/
+  208  ls
+  209  cd chem/KPP/
+  210  ls
+  211  cd kpp/
+  212  ls
+  213  cd kpp-2.1/
+  214  ls
+  215  cd util/
+  216  ls
+  217  cd ../src
+  218  ls
+  219  vi gen.c ../../../../../../rap-chem/WRF-brcabs/chem/KPP/kpp/kpp-2.1/src/gen.c 
+  220  vimdiff gen.c ../../../../../../rap-chem/WRF-brcabs/chem/KPP/kpp/kpp-2.1/src/gen.c 
+  221  vi gen.c 
+  222  vi ../../../../../../rap-chem/WRF-brcabs/chem/KPP/kpp/kpp-2.1/src/gen.c
+  223  ls
+  224  cd ../..
+  225  ls
+  226  cd ..
+  227  ls
+  228  cd ..
+  229  ls
+  230  cd ..
+  231  ls
+  232  command 
+  233  history 
+  234  :899
+  235  899
+  236  ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  237  ls -lrt
+  238  tail -f errors_comp.txt 
+  239  swhoqu
+  240  ls -rlt
+  241  vi errors_comp.txt 
+  242  jobs -l
+  243  ls
+  244  ls -rlt
+  245  tail -f log_comp.txt 
+  246  vi log_comp.txt 
+  247  vi errors_comp.txt 
+  248  ./clean -a
+  249  vi config.wrf 
+  250  module purge
+  251  module load gnu/13.2.0
+  252  module load intel/2023.2.0
+  253  module load impi/2023.2.0
+  254  module load hdf5parallel/1.10.5
+  255  module load netcdf-hdf5parallel/4.7.0
+  256  module load pnetcdf/1.12.3
+  257  export WRF_CHEM=1
+  258  export WRF_KPP=1
+  259  export YACC='/usr/bin/yacc -d'
+  260  export FLEX_LIB_DIR=/usr/lib64
+  261  export WRF_EM_CORE=1
+  262  export OMP_NUM_THREADS=1
+  263  export MP_STACK_SIZE=64000000
+  264  export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+  265  export JASPERINC=/usr/include/jasper
+  266  export JASPERLIB=/usr/lib64
+  267  ./configure
+  268  ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  269  tail -f log_comp.txt 
+  270  ls
+  271  ls -lrt
+  272  tail -f errors_comp.txt 
+  273  vi errors_comp.txt 
+  274  tail -f errors_comp.txt 
+  275  vi errors_comp.txt 
+  276  tail -f errors_comp.txt 
+  277  jobs -l
+  278  ls -rlt
+  279  vi errors_comp.txt 
+  280  checkq 
+  281  jobs -l
+  282  ls
+  283  cd chem/
+  284  ls
+  285  vi ../log_comp.txt 
+  286  vi ../errors_comp.txt 
+  287  vi module_kpp_redhc_made_soa_vbs_interface.F 
+  288  vimdiff module_kpp_redhc_made_soa_vbs_interface.F ../../rap-chem/WRF-brcabs/chem/module_kpp_redhc_made_soa_vbs_interface.F
+  289  vimdiff module_kpp_redhc_made_soa_vbs_interface.F ../../rap-chem/WRF-BrC/chem/module_kpp_redhc_made_soa_vbs_interface.F 
+  290  vi ../errors_comp.txt 
+  291  vi module_kpp_redhc_made_soa_vbs_interface.F 
+  292  vi ../errors_comp.txt 
+  293  vi module_kpp_redhc_made_soa_vbs_interface.F
+  294  vi ../errors_comp.txt 
+  295  vi module_kpp_redhc_made_soa_vbs_interface.f90 
+  296  vi module_kpp_redhc_made_soa_vbs_interface.F
+  297  cd KPP/
+  298  ls
+  299  cd kpp/
+  300  ls
+  301  cd kpp-2.1/
+  302  ls
+  303  cd src
+  304  ls
+  305  cd ..
+  306  ls
+  307  vi ../../../../errors_comp.txt 
+  308  vi ../../../module_kpp_redhc_made_soa_vbs_interface.F
+  309  vi ../../../module_kpp_redhc_made_soa_vbs_interface.F
+  310  ls
+  311  cd ..
+  312  ls
+  313  cd ..
+  314  ls
+  315  cd ..
+  316  ls
+  317  cd ../tools/
+  318  ls
+  319  vi ../../module_kpp_redhc_made_soa_vbs_interface.F
+  320  vi ../chem/module_kpp_redhc_made_soa_vbs_interface.F
+  321  cd ../..
+  322  ls
+  323  cd rap-chem/
+  324  ls
+  325  cd WRF-BrC/
+  326  ls
+  327  cd chem/
+  328  cd ../tools/
+  329  ls
+  330  grep -i "redhc" *
+  331  vi gen_interp.c 
+  332  cds
+  333  ls
+  334  cd WRF46-minsu/
+  335  ls
+  336  cd chem/
+  337  ls
+  338  ls -lrt
+  339  cd ..
+  340  ls
+  341  cd doc/
+  342  ls
+  343  ls -lrt
+  344  cd ..
+  345  ls
+  346  ls -rlt
+  347  vi log_comp.txt 
+  348  vi errors_comp.txt 
+  349  cd ../rap-chem/WRF-BrC/
+  350  ls
+  351  cd chem/
+  352  ls
+  353  grep "VDROG3_SOA2" *.F
+  354  cd ../..
+  355  ls
+  356  cd ../WRF46-minsu/
+  357  cd chem/
+  358  grep "VDROG3_SOA2" *.F
+  359  cds
+  360  ls
+  361  cd WRF46-minsu/
+  362  ls
+  363  cd chem/
+  364  ls
+  365  cd ..
+  366  ls
+  367  vi errors_comp.txt 
+  368  cd main/
+  369  ls
+  370  vi depend.common 
+  371  vimdiff depend.common ../../rap-chem/WRF-BrC/main/depend.common 
+  372  cd ..
+  373  ls
+  374  ls -lrt
+  375  vi errors_comp.txt 
+  376  ls
+  377  cd Registry/
+  378  ls
+  379  vi registry.chem 
+  380  vimdiff registry.chem ../../rap-chem/WRF-BrC/Registry/registry.chem 
+  381  vi ../../rap-chem/rap-chem/namelist.input
+  382  cd ../../WRF-Br
+  383  ls
+  384  cds
+  385  ls
+  386  cd rap-chem/
+  387  ls
+  388  cd WRF-BrC/
+  389  ls
+  390  cd Registry/
+  391  ls
+  392  grep "gfs_ozone" *
+  393  cds
+  394  ls
+  395  cd WRF46-minsu/
+  396  ls
+  397  cd Registry/
+  398  vimdiff Registry.EM_COMMON ../../rap-chem/WRF-BrC/Registry/Registry.EM_COMMON
+  399  cd ..
+  400  ls
+  401  ./clean -a
+  402  ./configure
+  403  ls
+  404  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  405  cds
+  406  ls
+  407  cd WRF46-minsu/
+  408  ls
+  409  cd Registry/
+  410  ls
+  411  vi Registry.EM_COMMON
+  412  grep "qnwfa_gc" *
+  413  vi registry.new3d_wif
+  414  vi Registry.EM_COMMON
+  415  rm Registry.EM_COMMON
+  416  cp ../../WRF46-copy/Registry/Registry.EM_COMMON .
+  417  ls
+  418  vi Registry.EM_COMMON
+  419  cds
+  420  ls
+  421  cd rap-chem/
+  422  ls
+  423  cd WRF-BrC/
+  424  ls
+  425  cd chem/
+  426  ls
+  427  vi chem_driver.F 
+  428  cds
+  429  ls
+  430  cd rap-chem/
+  431  ls
+  432  cd WRFv46/
+  433  ls
+  434  cp v4.6.0.tar.gz ../../
+  435  cd ../../
+  436  ls
+  437  tar -xvzf v4.6.0.tar.gz 
+  438  ls
+  439  mv WRFV4.6.0 WRFV4.6
+  440  ls
+  441  cd WRFV4.6/
+  442  ls
+  443  ./clean -a
+  444  cd chem
+  445  ls
+  446  pwd
+  447  ls
+  448  cd KPP/
+  449  ls
+  450  cd mechanisms/
+  451  ls
+  452  pwd
+  453  ls
+  454  cd ..
+  455  ls
+  456  cd ../ch
+  457  ls
+  458  cd ..
+  459  ls
+  460  vi depend.chem 
+  461  cd ../Registry/
+  462  ls
+  463  mv registry.chem registry.chem~
+  464  pwd
+  465  mv registry.chem~ registry.chem.orig
+  466  ls -rlt
+  467  ls
+  468  cd ..
+  469  ls
+  470  cp ../WRF46-minsu/config.wrf .
+  471  vi config.wrf 
+  472  module purge
+  473  module load gnu/13.2.0
+  474  module load intel/2023.2.0
+  475  module load impi/2023.2.0
+  476  module load hdf5parallel/1.10.5
+  477  module load netcdf-hdf5parallel/4.7.0
+  478  module load pnetcdf/1.12.3
+  479  export WRF_CHEM=1
+  480  export WRF_KPP=1
+  481  export YACC='/usr/bin/yacc -d'
+  482  export FLEX_LIB_DIR=/usr/lib64
+  483  export WRF_EM_CORE=1
+  484  export OMP_NUM_THREADS=1
+  485  export MP_STACK_SIZE=64000000
+  486  export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+  487  export JASPERINC=/usr/include/jasper
+  488  export JASPERLIB=/usr/lib64
+  489  ls
+  490  ls -rlt
+  491  ls
+  492  ./configure
+  493  ls -lrt
+  494  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  495  tail -f errors_comp.txt 
+  496  ls -rlt
+  497  vi errors_comp.txt 
+  498  jobs -l
+  499  ls
+  500  cd Registry/
+  501  ls
+  502  vi registry.dimspec 
+  503  cd ..
+  504  ls
+  505  cd Registry/
+  506  ls
+  507  cd ../chem/KPP/
+  508  ls
+  509  cd mechanisms/
+  510  ls
+  511  cd redhc_made_soa_vbs
+  512  ls
+  513  ls -rlt
+  514  cd ..
+  515  ls
+  516  cd ..
+  517  ls
+  518  cd ..
+  519  ls
+  520  vi convert_emiss.F 
+  521  cd KPP/
+  522  ls
+  523  cd mechanisms/
+  524  ls
+  525  cd redhc_made_soa_vbs
+  526  ls
+  527  ls -rlt
+  528  vi redhc_made_soa_vbs.spc
+  529  vi redhc_made_soa_vbs.eqn
+  530  vi redhc_made_soa_vbs.def
+  531  ls
+  532  cd ..
+  533  ls
+  534  cd ../..
+  535  ls
+  536  ls -rlt
+  537  cd ..
+  538  ls
+  539  ls -rlt
+  540  vi errors_comp.txt 
+  541  cds
+  542  ls
+  543  cd rap-chem/
+  544  ls
+  545  cd WRF-brcabs/
+  546  ls
+  547  cd chem/KPP/
+  548  ls
+  549  cd mechanisms/
+  550  ls
+  551  cd ../inc/
+  552  ls
+  553  cd redhc_made_soa_vbs
+  554  ls
+  555  ls -rlt
+  556  pwd
+  557  vi kpp_mechd_b_redhc_made_soa_vbs.inc
+  558  vi kpp_mechd_a_redhc_made_soa_vbs.inc
+  559  vi extra_decls_update_rconst_redhc_made_soa_vbs.inc
+  560  vi kpp_mechd_u_redhc_made_soa_vbs.inc
+  561  pwd
+  562  cp -f * /scratch1/BMC/wrf-chem/minsusee/WRFV4.6/chem/KPP/inc/redhc_made_soa_vbs
+  563  cd ../redhc_made_soa_vbs_aq/
+  564  cp -f * /scratch1/BMC/wrf-chem/minsusee/WRFV4.6/chem/KPP/inc/redhc_made_soa_vbs_aq/
+  565  cds
+  566  ls
+  567  cd WRF46-
+  568  cd WRFV4.6/
+  569  ls
+  570  ls -rlt
+  571  tail -f log_comp.v2.txt 
+  572  ls
+  573  cd WRFV4.6/
+  574  ls
+  575  cd chem/
+  576  ls
+  577  grep -i "RATE_CVBSOA" *
+  578  ls
+  579  cds
+  580  ls
+  581  cd rap-chem/
+  582  ls
+  583  cd WRF-BrC/
+  584  ls
+  585  cd chem/KPP/
+  586  ls
+  587  cd mechanisms/
+  588  ls
+  589  vi ../module_wkppc_constants.F
+  590  cd redhc_made_soa_vbs
+  591  ls
+  592  ls -rlt
+  593  grep "RATE_" *
+  594  vi redhc_made_soa_vbs.def
+  595  cd ../..
+  596  ls
+  597  cd ../ch
+  598  cd ..
+  599  ls
+  600  grep -i "RATE_CVBSOA" *
+  601  ls -rlt
+  602  ls
+  603  cd ..
+  604  ls -rlt
+  605  vi errors_comp.txt 
+  606  pwd
+  607  cd ..
+  608  ls
+  609  cds
+  610  ls
+  611  cd WRFV4.6/
+  612  ls
+  613  vi errors_comp.txt 
+  614  cds
+  615  ls
+  616  cd WRFV4.6/
+  617  ls
+  618  ls -rlt
+  619  rm log_comp.txt 
+  620  rm errors_comp.txt 
+  621  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  622  tail -f errors_comp.txt 
+  623  ls
+  624  checkq 
+  625  jobs -l
+  626  ls
+  627  vi errors_comp.txt 
+  628  cd chem/
+  629  ls
+  630  vimdiff chem_driver.F /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF-brcabs/chem/chem_driver.F 
+  631  vi chem_driver.F 
+  632  cd KPP/
+  633  ls
+  634  cd util/
+  635  ls
+  636  cd w
+  637  ls
+  638  cd wkc/
+  639  ls
+  640  vi gen_kpp_mech_dr.c 
+  641  cd ..
+  642  ls
+  643  cd ..
+  644  ls
+  645  cd ..
+  646  ls
+  647  cd ..
+  648  ls
+  649  ls -rlt
+  650  ./compile em_real &> log_comp.v2.txt
+  651  ./clean -a
+  652  ls
+  653  cd chem/
+  654  ls
+  655  cd KPP/
+  656  ls
+  657  cd kpp/
+  658  ls
+  659  cd ../inc/
+  660  ls
+  661  cd redhc_made_soa_vbs
+  662  ls
+  663  ls -lrt
+  664  cd ..
+  665  ls -rlt
+  666  vi fixed_decl_kpp_interf.inc
+  667  vi fixed_args_kpp_interf.inc 
+  668  vi kpp_ctrl_default.inc 
+  669  cd ..
+  670  ls
+  671  vi module_wkppc_constants.F 
+  672  cd ..
+  673  ls
+  674  cd ..
+  675  ls
+  676  cd Registry/
+  677  ls
+  678  vi registry.chem
+  679  vi Registry.chem
+  680  vi Registry.EM_COMMON
+  681  grep "gfs_ozone" *
+  682  cd ..
+  683  ls
+  684  rm log_comp.*
+  685  ./configure
+  686  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  687  tail -f errors_comp.txt 
+  688  jobs -l
+  689  vi errors_comp.txt 
+  690  ls -rlt'
+  691  ls
+  692  rm log_comp.txt 
+  693  rm errors_comp.txt 
+  694  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  695  vi errors_comp.txt 
+  696  cds
+  697  ls
+  698  cd rap-chem/
+  699  ls
+  700  cd WRF-brcabs/
+  701  ls
+  702  cd ..
+  703  ls
+  704  cd ..
+  705  ls
+  706  cd WRF46-
+  707  ls
+  708  cd WRF46-minsu/
+  709  ls
+  710  cd chem/KPP/
+  711  ls
+  712  cd mechanisms/
+  713  ls
+  714  cd re
+  715  pwd
+  716  cds
+  717  ls
+  718  cd WRFV4.6/
+  719  ls
+  720  cd chem/KPP/
+  721  ls
+  722  cd mechanisms/
+  723  ls
+  724  cd redhc_made_soa_vbs
+  725  ls
+  726  ls -lrt
+  727  vi redhc_made_soa_vbs.eqn
+  728  vi redhc_made_soa_vbs.def
+  729  grep -i "rate_cvpoa" *
+  730  vi redhc_made_soa_vbs.eqn
+  731  cd ..
+  732  ls
+  733  cd racm_soa_vbs
+  734  ls
+  735  vi racm_soa_vbs.eqn 
+  736  cd ..
+  737  ls
+  738  grep -ir 'real' .
+  739  grep -ir 'real' ./*.eqn
+  740  grep -ir 'real' .*.eqn
+  741  ls
+  742  grep -ir 'real' . > test
+  743  vi test 
+  744  ls
+  745  rm test 
+  746  cd redhc_made_soa_vbs
+  747  ls
+  748  vi redhc_made_soa_vbs.def 
+  749  cd ..
+  750  ls
+  751  cd racm_soa_vbs_het
+  752  ls
+  753  vi racm_soa_vbs_het.eqn 
+  754  grep "ARR2" *
+  755  cd ../..
+  756  ls
+  757  cd inc/
+  758  ls
+  759  cd redhc_made_soa_vbs
+  760  ls
+  761  pwd
+  762  ls -lrt
+  763  grep -i "rate_cvpoa" *
+  764  cd ..
+  765  ls
+  766  cd ..
+  767  ls
+  768  cd mechanisms/
+  769  ls
+  770  cd redhc_made_soa_vbs
+  771  ls
+  772  vi redhc_made_soa_vbs.kpp
+  773  cds
+  774  ls
+  775  cd rap-chem/
+  776  ls
+  777  cd ..
+  778  ls
+  779  cd WRFV4.6/
+  780  ls
+  781  cd Registry/
+  782  ls
+  783  vi registry.chem
+  784  cd ../
+  785  ls
+  786  cd chem/
+  787  ls
+  788  cd KPP/
+  789  ls
+  790  cd inc/
+  791  ls
+  792  ls -lrt
+  793  cd redhc_made_soa_vbs
+  794  ls
+  795  cd ..
+  796  ls
+  797  cd redhc_made_soa_vbs
+  798  ls
+  799  ls -lrt
+  800  time
+  801  current time
+  802  cd .
+  803  cd ..
+  804  ls
+  805  cd ..
+  806  ls
+  807  pwd
+  808  ./clean_kpp 
+  809  ls -lrt
+  810  ls
+  811  cd ic
+  812  ls
+  813  cd inc/
+  814  ls
+  815  cd redhc_made_soa_vbs
+  816  ls
+  817  ls -rlt
+  818  pwd
+  819  ls -rlt
+  820  cd ../..
+  821  ls
+  822  ls -lrt
+  823  cd ..
+  824  ls
+  825  cd ..
+  826  ls
+  827  cds
+  828  ls
+  829  cd rap-chem/
+  830  ls
+  831  cd WRF-brcabs/
+  832  ls
+  833  ls -rlt
+  834  ls
+  835  cd chem/
+  836  ls
+  837  cd ..
+  838  ls
+  839  cd chem/KPP/
+  840  ls
+  841  cd inc/
+  842  ls
+  843  cd redhc_made_soa_vbs
+  844  ls
+  845  ls -lrt
+  846  vi extra_decls_update_rconst_redhc_made_soa_vbs.inc
+  847  vi /scratch1/BMC/wrf-chem/Jordan/models/RAP-Chem/RAP-Chem_v31_AEROMMA_CONFIG_debug_lindsey_test_plumedt_hourlyFRP_ROCKY8_heraconfig_nopnetcdfquilt/chem/KPP/inc/redhc_made_soa_vbs/kpp_mechd_a_redhc_made_soa_vbs.inc 
+  848  vi /scratch1/BMC/wrf-chem/Jordan/models/RAP-Chem/RAP-Chem_v31_AEROMMA_CONFIG_debug_lindsey_test_plumedt_hourlyFRP_ROCKY8_heraconfig_nopnetcdfquilt/chem/KPP/inc/redhc_made_soa_vbs/extra_args_to_update_rconst_redhc_made_soa_vbs.inc
+  849  pwd
+  850  ls -rlt
+  851  grep -i "VDROG3_SOA2" *(
+  852  grep -i "VDROG3_SOA2" 
+  853  grep -i "VDROG3_SOA2" *
+  854  cds
+  855  ls
+  856  cd WRFV4.6/
+  857  ls
+  858  cd chem/
+  859  ls
+  860  cd KPP/
+  861  ls
+  862  cd inc/
+  863  ls
+  864  cd redhc_made_soa_vbs
+  865  ls
+  866  grep -i "VDROG3_SOA2" *
+  867  vi vi kpp_mechd_ia_redhc_made_soa_vbs.inc
+  868  vi kpp_mechd_ia_redhc_made_soa_vbs.inc
+  869  cd ..
+  870  ls
+  871  cd ..
+  872  ls
+  873  cd ../re
+  874  ls
+  875  cd ../../Registry/
+  876  ls
+  877  grep -i "VDROG3_SOA2" *
+  878  cds
+  879  ls
+  880  cd rap-chem/
+  881  ls
+  882  cd WRF-BrC/
+  883  ls
+  884  cd Registry/
+  885  ls
+  886  grep -i "VDROG3_SOA2" *
+  887  vi registry.chem 
+  888  grep -i "vdrog3" *
+  889  cd ..
+  890  ls
+  891  cds
+  892  ls
+  893  cd rap-chem/WRF-brcabs/
+  894  ls
+  895  cd Registry/
+  896  ls
+  897  grep "vdrog3" *
+  898  grep -i "vdrog3" *
+  899  cd ..
+  900  ls
+  901  cd chem/
+  902  grep -i "vdrog3" *.F
+  903  vi aerosol_driver.F 
+  904  vu chem_driver.F
+  905  vui chem_driver.F
+  906  vi chem_driver.F
+  907  cd KPP/
+  908  ls
+  909  cd mechanisms/
+  910  ls
+  911  cd redhc_made_soa_vbs
+  912  ls
+  913  grep -i 'vdrog' *
+  914  cd ..
+  915  ls
+  916  cd ..
+  917  ls
+  918  cd ..
+  919  ls
+  920  pwd
+  921  grep "kpp_mechanism_driver" *.F
+  922  grep -i "kpp_mechanism_driver" *.F
+  923  ls
+  924  cd KPP/
+  925  ls
+  926  grep -ir "kpp_mechanism_driver" .
+  927  cd ..
+  928  ls
+  929  cd ..
+  930  ls
+  931  grep -ir "kpp_mechanism_driver" .
+  932  vi Makefile 
+  933  cd chem/
+  934  ls
+  935  vi Makefile
+  936  vi Makefile.temp 
+  937  cds
+  938  ls
+  939  cd rap-chem/
+  940  ls
+  941  cd WRF-brcas
+  942  cd WRF-brcabs/
+  943  ls
+  944  cd chem/KPP/icx
+  945  ls
+  946  cd chem/KPP/inc/
+  947  ls
+  948  ls -rlt
+  949  vi fixed_decl_kpp_interf.inc 
+  950  vi fixed_args_kpp_interf.inc 
+  951  vi kpp_ctrl_default.inc 
+  952  cd ..
+  953  ls
+  954  vi module_wkppc_constants.F 
+  955  pwd
+  956  cd ..
+  957  ls
+  958  cd ../Registry/
+  959  ls
+  960  vi registry.chem 
+  961  vi Registry.EM_COMMON
+  962  grep "gfs_ozone" 8
+  963  grep "gfs_ozone" *
+  964  cds
+  965  ls
+  966  cd WRFV4.6/
+  967  ls
+  968  ls -rlt
+  969  vi errors_comp.txt 
+  970  cd chem/
+  971  ls
+  972  cd KPP/
+  973  ls
+  974  cd inc/
+  975  ls
+  976  ls -rlt
+  977  vi kpp_ctrl_default.inc 
+  978  vi fixed_decl_kpp_interf.inc 
+  979  vi fixed_args_kpp_interf.inc 
+  980  ls
+  981  pwd
+  982  cd ..
+  983  ls
+  984  cd mechanisms/
+  985  ls
+  986  cd ..
+  987  ls
+  988  cd ..
+  989  ls
+  990  vi module_lightning_nox_driver.F 
+  991  vi module_plumerise1.F
+  992  grep "plumerise" *.F
+  993  vi module_chem_plumerise_scalar.F
+  994  vi module_emissions_anthropogenics.F 
+  995  vi dry_dep_driver.F 
+  996  vi dry_dep_driver.f90 
+  997  vi dry_dep_driver.F 
+  998  vi emissions_driver.F 
+  999  vi depend.chem 
+ 1000  vi Makefile
+ 1001  cds
+ 1002  ls
+ 1003  cd rap-chem/
+ 1004  ls
+ 1005  ls -rlt
+ 1006  cd ..
+ 1007  ls
+ 1008  cd WRFV4.6/
+ 1009  ls
+ 1010  ls -lrt
+ 1011  ls
+ 1012  ls -rlt
+ 1013  tail -f log_comp.txt 
+ 1014  vi log_comp.txt 
+ 1015  vi errors_comp.txt 
+ 1016  tail -f errors_comp.txt 
+ 1017  jobs -l
+ 1018  ls
+ 1019  ls -rlt
+ 1020  vi errors_comp.txt 
+ 1021  vi chem/depend.chem 
+ 1022  vi chem/emissions_driver.F 
+ 1023  vi chem/depend.chem 
+ 1024  vi chem/emissions_driver.F 
+ 1025  ls
+ 1026  vi errors_comp.txt 
+ 1027  ls -rlt
+ 1028  ./compile em_real &> log_comp.v2.txt
+ 1029  ls
+ 1030  rm log_comp.v2.txt 
+ 1031  ls
+ 1032  ./clean -a
+ 1033  cd chem/KPP/
+ 1034  ls
+ 1035  ./clean_kpp 
+ 1036  cd ../..
+ 1037  ls
+ 1038  ls -rlt
+ 1039  command history > test
+ 1040  vi test/
+ 1041  command history > test.txt

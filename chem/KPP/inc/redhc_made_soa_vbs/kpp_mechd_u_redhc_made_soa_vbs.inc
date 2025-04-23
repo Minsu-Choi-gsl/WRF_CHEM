@@ -1,0 +1,14 @@
+!
+INTEGER, PARAMETER :: psoaalk=1
+INTEGER, PARAMETER :: pole=2
+INTEGER, PARAMETER :: paro=3
+INTEGER, PARAMETER :: pivoc=4
+
+! biogenic
+INTEGER, PARAMETER :: pisop=5
+INTEGER, PARAMETER :: pterp=6
+INTEGER, PARAMETER :: psesq=7
+
+! for branching
+INTEGER, PARAMETER :: pbrch=8
+INTEGER, PARAMETER :: pocv0=9

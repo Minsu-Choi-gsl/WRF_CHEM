@@ -1,0 +1,1000 @@
+   92  ls
+   93  cd kpp-2.1/
+   94  ls
+   95  cd util/
+   96  ls
+   97  cd ../src
+   98  ls
+   99  vi gen.c 
+  100  cds
+  101  ls
+  102  cd WRFV4.6/
+  103  ls
+  104  ./configure
+  105  ls -lrt
+  106  rm errors_comp.txt log_comp.txt
+  107  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  108  cds
+  109  ls
+  110  cd rap-chem/
+  111  ls
+  112  ls -rlt
+  113  cd rap-chem
+  114  ls
+  115  cds
+  116  ls
+  117  cd tools/
+  118  ls
+  119  cd nc2gnu/
+  120  ls -rlt
+  121  vi pre.plot.rapchem.hrly.vtot.sh
+  122  cds
+  123  ls
+  124  cd tools/combine/
+  125  ls -rlt
+  126  ssh -Y hfe10
+  127  cds
+  128  ls
+  129  cds
+  130  ls
+  131  cd rap-chem/
+  132  ls
+  133  cds
+  134  ls
+  135  cd tools/
+  136  ls
+  137  cd combine/
+  138  ls -lrt
+  139  ncview combined.rapchem.coffb.vpoa.201908.nc
+  140  cds
+  141  l
+  142  cds
+  143  ls
+  144  cd tools/
+  145  ls
+  146  cd sr
+  147  ls
+  148  cds
+  149  ls
+  150  cd tools/
+  151  ls
+  152  cds
+  153  ls
+  154  cd WRFV4.6/
+  155  ls
+  156  cd chem/
+  157  ls
+  158  vi module_chem_plumerise_scalar.
+  159  vi module_chem_plumerise_scalar.F
+  160  cd ..
+  161  ls -rlt
+  162  tail -f log.3.txt 
+  163  vi log.3.txt 
+  164  ccd chem/
+  165  cd chem/
+  166  ls
+  167  vi dry_dep_driver.F 
+  168  cds
+  169  ls
+  170  cd rap-chem/
+  171  ls
+  172  cd WRF-BrC/
+  173  ls
+  174  cd share/
+  175  ls
+  176  vi module_model_constants.F 
+  177  pwd
+  178  vimdiff module_model_constants.F ../../../WRFV4.6/share/module_model_constants.F 
+  179  vi ../chem/dry_dep_driver.F 
+  180  cd ..
+  181  ls
+  182  cd chem/
+  183  ls
+  184  grep -i "module_model_constants" *.F
+  185  cd ../share/
+  186  ls
+  187  vi Makefile 
+  188  pwd
+  189  vi Makefile 
+  190  vimdiff Makefile /scratch1/BMC/wrf-chem/minsusee/WRFV4.6/share/Makefile 
+  191  cd ../chem/
+  192  vimdiff Makefile /scratch1/BMC/wrf-chem/minsusee/WRFV4.6/chem/Makefile 
+  193  vimdiff depend.chem /scratch1/BMC/wrf-chem/minsusee/WRFV4.6/chem/depend.chem 
+  194  cds
+  195  ls
+  196  cd rap-chem/
+  197  ls
+  198  cd ../WRFV4.6/
+  199  ls
+  200  ls -lrt
+  201  tail -f errors_comp.txt 
+  202  vi errors_comp.txt 
+  203  tail -f errors_comp.txt 
+  204  vi errors_comp.txt 
+  205  tail -f errors_comp.txt 
+  206  vi errors_comp.
+  207  vi errors_comp.txt 
+  208  ls
+  209  ./compile em_real &> log.3.txt
+  210  cd chem/
+  211  ls
+  212  vi dry_dep_driver.F 
+  213  cd ...
+  214  cd ..
+  215  ls
+  216  ./compile em_real
+  217  cd chem/
+  218  ls
+  219  vi dry_dep_driver.F 
+  220  vimdiff dry_dep_driver.F ../../rap-chem/WRF-BrC/chem/dry_dep_driver.F
+  221  vi dry_dep_driver.F 
+  222  cd ..
+  223  ls
+  224  ./compile em_real
+  225  :q!
+  226  vi config.wrf 
+  227  ls
+  228  ./clean -a
+  229  ls
+  230  cd chem/KPP/
+  231  ls
+  232  ./clean_kpp 
+  233  cd ../..
+  234  ls
+  235  module purge
+  236  module load intel/2023.2.0
+  237  module load impi/2023.2.0
+  238  module load hdf5parallel/1.10.5
+  239  module load netcdf-hdf5parallel/4.7.0
+  240  module load pnetcdf/1.12.3
+  241  export WRF_CHEM=1
+  242  export WRF_KPP=1
+  243  export YACC='/usr/bin/yacc -d'
+  244  export FLEX_LIB_DIR=/usr/lib64
+  245  export WRF_EM_CORE=1
+  246  export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+  247  export FC=ifort
+  248  export CC=icc
+  249  export CXX=icpc
+  250  which gfortran >/dev/null 2>&1 && echo "Warning: gfortran is still in your path"
+  251  vi config.wrf 
+  252  module purge
+  253  module load gnu/13.2.0
+  254  module load intel/2023.2.0
+  255  module load impi/2023.2.0
+  256  module load hdf5parallel/1.10.5
+  257  module load netcdf-hdf5parallel/4.7.0
+  258  module load pnetcdf/1.12.3
+  259  export WRF_CHEM=1
+  260  export WRF_KPP=1
+  261  export YACC='/usr/bin/yacc -d'
+  262  export FLEX_LIB_DIR=/usr/lib64
+  263  export WRF_EM_CORE=1
+  264  export OMP_NUM_THREADS=1
+  265  export MP_STACK_SIZE=64000000
+  266  export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+  267  export JASPERINC=/usr/include/jasper
+  268  export JASPERLIB=/usr/lib64
+  269  ls
+  270  ./configure
+  271  ls -rlt
+  272  vi configure.wrf
+  273  vi share/module_model_constants.F 
+  274  ifort -c share/module_model_constants.F
+  275  vi share/module_model_constants.F 
+  276  ls
+  277  rm errors_comp.*
+  278  rm log*
+  279  ls
+  280  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  281  tail -f errors_comp.txt 
+  282  vi errors_comp.txt 
+  283  pwd
+  284  cd share/
+  285  ls
+  286  cd ..
+  287  ls
+  288  pwd
+  289  tail -f errors_comp.txt 
+  290  ls -rlt
+  291  jobs -l
+  292  vi errors_comp.txt 
+  293  cds
+  294  ls
+  295  cd WRFV4.6/
+  296  ls
+  297  cd chem/
+  298  ls
+  299  vi module_chem_plumerise_scalar.F 
+  300  pwd
+  301  cd ..
+  302  ls
+  303  ls -lrt
+  304  vi config.wrf 
+  305  module purge
+  306  module load gnu/13.2.0
+  307  module load intel/2023.2.0
+  308  module load impi/2023.2.0
+  309  module load hdf5parallel/1.10.5
+  310  module load netcdf-hdf5parallel/4.7.0
+  311  module load pnetcdf/1.12.3
+  312  export WRF_CHEM=1
+  313  export WRF_KPP=1
+  314  export YACC='/usr/bin/yacc -d'
+  315  export FLEX_LIB_DIR=/usr/lib64
+  316  export WRF_EM_CORE=1
+  317  export OMP_NUM_THREADS=1
+  318  export MP_STACK_SIZE=64000000
+  319  export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+  320  export JASPERINC=/usr/include/jasper
+  321  export JASPERLIB=/usr/lib64
+  322  ls
+  323  ls -rlt
+  324  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  325  tail -f errors_comp.txt 
+  326  vi errors_comp.txt 
+  327  cd chem/
+  328  l
+  329  vi module_chem_plumerise_scalar.F 
+  330  cd ..
+  331  vi errors_comp.txt 
+  332  nohup ./compile em_real > log_comp.v3.txt 2> errors_comp.v3.txt &
+  333  tail -f errors_comp.v3.txt 
+  334  ls -rlt
+  335  vi errors_comp.v3.txt 
+  336  ls
+  337  nohup ./compile em_real > log_comp.v4.txt 2> errors_comp.v4.txt &
+  338  tail -f errors_comp.v4.txt 
+  339  vi chem/module_chem_plumerise_scalar.F 
+  340  nohup ./compile em_real > log_comp.v5.txt 2> errors_comp.v5.txt &
+  341  tail -f errors_comp.v5.txt 
+  342  vi errors_comp.v5.txt 
+  343  vi chem/emissions_driver.F 
+  344  vi chem/Makefile
+  345  cd ..
+  346  nohup ./compile em_real > log_comp.v6.txt 2> errors_comp.v6.txt &
+  347  tail -f errors_comp.v6.txt 
+  348  ls
+  349  cd WRFV4.6/
+  350  ls
+  351  nohup ./compile em_real > log_comp.v6.txt 2> errors_comp.v6.txt &
+  352  tail -f errors_comp.v6.txt 
+  353  vi errors_comp.v6.txt 
+  354  vi chem/Makefile
+  355  vi errors_comp.v6.txt 
+  356  nohup ./compile em_real > log_comp.v7.txt 2> errors_comp.v7.txt &
+  357  tail -f errors_comp.v7.txt 
+  358  vi chem/depend.chem 
+  359  vi chem/module_dust_data.F
+  360  pwd
+  361  ls
+  362  nohup ./compile em_real > log_comp.v8.txt 2> errors_comp.v8.txt &
+  363  tail -f errors_comp.v8.txt 
+  364  ls
+  365  jobs -l
+  366  tail -f errors_comp.v8.txt 
+  367  jobs -l
+  368  ls
+  369  rm errors_comp.*
+  370  rm log_comp.*
+  371  ls
+  372  cd chem/
+  373  ls
+  374  rm *.o
+  375  rm *.f90
+  376  rm *.mod
+  377  ls
+  378  cd ..
+  379  ls
+  380  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  381  tail -f errors_comp.txt 
+  382  ls -rlt
+  383  vi errors_comp.txt 
+  384  cd chem/
+  385  ls
+  386  vimdiff Makefile Makefile.temp 
+  387  cp Makefile Makefile.temp 
+  388  ls
+  389  vi Makefile_org 
+  390  vimdiff Makefile Makefile_org 
+  391  vi depend.chem 
+  392  rm *.o
+  393  rm *.mod
+  394  rm *.f90
+  395  ls
+  396  cd ..
+  397  ls
+  398  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  399  tail -f errors_comp.txt 
+  400  ls
+  401  ls -lrt
+  402  vi errors_comp.txt 
+  403  cd chem/
+  404  ls
+  405  grep "gocart_dust_fengsha_driver" *.F
+  406  vi emissions_driver.F 
+  407  vi module_gocart_dust_fengsha.F
+  408  vimdiff module_gocart_dust_fengsha.F ../../rap-chem/WRF-BrC/chem/module_gocart_dust_fengsha.F
+  409  ls module_gocart_dust* -ll
+  410  vi ../errors_comp.txt 
+  411  ls
+  412  vi depend.chem 
+  413  pwd
+  414  vi depend.chem 
+  415  cd ../phys/
+  416  ls
+  417  vi module_data_gocart_dust.F 
+  418  vimdiff module_data_gocart_dust.F /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF-BrC/phys/module_data_gocart_dust.F 
+  419  pwd
+  420  vimdiff module_data_gocart_dust.F /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF-BrC/phys/module_data_gocart_dust.F 
+  421  vi Makefile 
+  422  vi module_dust_emis.F 
+  423  cd ../chem/
+  424  ls
+  425  vi ../errors_comp.txt 
+  426  ls
+  427  grep -i "MODULE_GOCART_DUST_FENGSHA" *.F
+  428  cd ../Registry/
+  429  ls
+  430  vi registry.chem
+  431  cd ..
+  432  vi frame/module_state_description.F
+  433  pwd
+  434  vi inc/allocs.inc 
+  435  cd chem/
+  436  ls
+  437  pwd
+  438  vi depend.chem 
+  439  rm *.o
+  440  rm *.f90
+  441  rm *.mod
+  442  ls
+  443  cd ..
+  444  ls
+  445  ls -rlt
+  446  rm log_comp.*
+  447  rm errors_comp.*
+  448  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  449  tail -f errors_comp.txt 
+  450  ls
+  451  vi errors_comp.txt v2
+  452  vi errors_comp.txt
+  453  vi chem/depend.chem 
+  454  vi errors_comp.txt
+  455  ls
+  456  cd chem/
+  457  ls
+  458  vi Makefile
+  459  vi depend.chem 
+  460  vi Makefile
+  461  pwd
+  462  ls module_dust_data* -ll
+  463  pwd
+  464  ls
+  465  rm *.o
+  466  rm *.mod
+  467  rm *.f90
+  468  ls
+  469  cd ..
+  470  ls
+  471  rm errors_comp.txt 
+  472  rm log_comp.txt 
+  473  ls -rlt
+  474  rm module_dust_data.F 
+  475  cd chem/
+  476  cd ..
+  477  ls
+  478  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  479  tail -f errors_comp.txt 
+  480  vi errors_comp.txt 
+  481  jobs -l
+  482  rm errors_comp.txt 
+  483  rm log_comp.txt 
+  484  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  485  tail -f errors_comp.txt 
+  486  vi chem/emissions_driver.f90
+  487  vi errors_comp.txt 
+  488  cd chem/
+  489  ls
+  490  vi module_gocart_dust_afwa.F 
+  491  vi emissions_driver.F 
+  492  vi module_gocart_dust_afwa.F 
+  493  vimdiff module_gocart_dust_afwa.F /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF-BrC/chem/module_gocart_dust_afwa.F
+  494  vi module_gocart_dust_afwa.F 
+  495  vi ../errors_comp.txt 
+  496  vi emissions_driver.F 
+  497  vi ../errors_comp.txt 
+  498  vi module_gocart_dust_afwa.F 
+  499  cd ..
+  500  ls
+  501  rm errors_comp.txt 
+  502  rm log_comp.txt 
+  503  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  504  tail -f errors_comp.txt 
+  505  ls -rlt
+  506  vi errors_comp.txt 
+  507  cd chem/
+  508  ls
+  509  cd ..
+  510  ls
+  511  vi chem/emissions_driver.F 
+  512  cd chem/
+  513  grep "uoc_dust_driver" 8.F
+  514  grep "uoc_dust_driver" *.F
+  515  vi module_uoc_dust.F 
+  516  vi emissions_driver.F 
+  517  rm *.o
+  518  rm *.mod
+  519  rm *.f90
+  520  cd ..
+  521  ls
+  522  rm log_comp.txt 
+  523  rm errors_comp.txt 
+  524  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  525  tail -f errors_comp.txt 
+  526  vi chem/emissions_driver.F 
+  527  vi errors_comp.txt 
+  528  vi chem/emissions_driver.f90 
+  529  vi errors_comp.txt 
+  530  vi chem/emissions_driver.f90 
+  531  vi chem/emissions_driver.F 
+  532  cd chem/
+  533  ls
+  534  mv module_add_emiss_burn.F module_add_emiss_burn.F.orig
+  535  vi module_add_emiss_burn.F.orig 
+  536  grep "add_emis_burn" *.F
+  537  pwd
+  538  vi emissions_driver.F 
+  539  rm *.o
+  540  rm *.mod
+  541  rm *.f90
+  542  ls
+  543  cd ..
+  544  ls
+  545  rm errors_comp.txt 
+  546  rm log_comp.txt 
+  547  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  548  tail -f errors_comp.txt 
+  549  ls -lrt
+  550  ls
+  551  vi errors_comp.txt 
+  552  cd chem/
+  553  ls
+  554  grep "emissions_driver" *.F
+  555  vi chem_driver.F 
+  556  pwd
+  557  vi ../errors_comp.txt 
+  558  cd ..
+  559  ls
+  560  rm errors_comp.txt 
+  561  rm log_comp.txt 
+  562  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  563  tail -f errors_comp.txt 
+  564  vi errors_comp.txt 
+  565  rm errors_comp.txt 
+  566  rm log_comp.txt 
+  567  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  568  tail -f errors_comp.txt 
+  569  rm errors_comp.txt 
+  570  rm log_comp.txt 
+  571  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  572  tail -f errors_comp.txt 
+  573  ls -lrt
+  574  vi errors_comp.txt 
+  575  jobs -l
+  576  rm errors_comp.txt 
+  577  rm log_comp.txt 
+  578  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  579  tail -f errors_comp.txt 
+  580  vi errors_comp.txt 
+  581  ls
+  582  rm errors_comp.txt 
+  583  rm log_comp.txt 
+  584  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  585  tail -f errors_comp.txt 
+  586  cd Registry/
+  587  ls
+  588  vi registry.chem
+  589  cd ..
+  590  ls
+  591  rm log_comp.txt 
+  592  rm errors_comp.txt 
+  593  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  594  tail -f errors_comp.txt 
+  595  ls
+  596  cd chem/
+  597  ls
+  598  cd ../Registry/
+  599  ls
+  600  vi registry.chem
+  601  grep "biomass_burn_opt" *
+  602  ls
+  603  cd ..
+  604  ls
+  605  jobs -l
+  606  rm log_comp.txt 
+  607  rm errors_comp.txt 
+  608  ./clean -a
+  609  ls
+  610  vi config.wrf 
+  611  module purge
+  612  module load gnu/13.2.0
+  613  module load intel/2023.2.0
+  614  module load impi/2023.2.0
+  615  module load hdf5parallel/1.10.5
+  616  module load netcdf-hdf5parallel/4.7.0
+  617  module load pnetcdf/1.12.3
+  618  export WRF_CHEM=1
+  619  export WRF_KPP=1
+  620  export YACC='/usr/bin/yacc -d'
+  621  export FLEX_LIB_DIR=/usr/lib64
+  622  export WRF_EM_CORE=1
+  623  export OMP_NUM_THREADS=1
+  624  export MP_STACK_SIZE=64000000
+  625  export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+  626  export JASPERINC=/usr/include/jasper
+  627  export JASPERLIB=/usr/lib64
+  628  cd chem/KPP/
+  629  ls
+  630  ./clean_kpp 
+  631  cd ../..
+  632  ls
+  633  ./configure
+  634  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  635  tail -f errors_comp.txt 
+  636  ls
+  637  cd chem/
+  638  vi module_gocart_dust_fengsha.F 
+  639  vi depend.chem 
+  640  vi Makefile
+  641  pwd
+  642  vimdiff Makefile_org /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF-brcabs/chem/Makefile_org 
+  643  vi depend.chem 
+  644  vimdiff depend.chem /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF-brcabs/chem/depend.chem 
+  645  ls
+  646  vi CMakeLists.txt 
+  647  cd ..
+  648  ls
+  649  rm errors_comp.txt 
+  650  rm log_comp.txt 
+  651  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  652  tail -f errors_comp.txt 
+  653  rm errors_comp.txt 
+  654  rm log_comp.txt 
+  655  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  656  tail -f errors_comp.txt 
+  657  jobs -l
+  658  rm errors_comp.txt 
+  659  rm log_comp.txt 
+  660  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  661  tail -f errors_comp.txt 
+  662  vi errors_comp.txt 
+  663  ls
+  664  rm log_comp.txt 
+  665  rm errors_comp.txt 
+  666  ls
+  667  ./clean -a
+  668  ls
+  669  cd chem/KPP/
+  670  ./clean_kpp 
+  671  cd ..
+  672  ls
+  673  vi CMakeLists.txt 
+  674  vi Makefile
+  675  cd ..
+  676  ls
+  677  vi config.wrf 
+  678  module purge
+  679  module load gnu/13.2.0
+  680  module load intel/2023.2.0
+  681  module load impi/2023.2.0
+  682  module load hdf5parallel/1.10.5
+  683  module load netcdf-hdf5parallel/4.7.0
+  684  module load pnetcdf/1.12.3
+  685  export WRF_CHEM=1
+  686  export WRF_KPP=1
+  687  export YACC='/usr/bin/yacc -d'
+  688  export FLEX_LIB_DIR=/usr/lib64
+  689  export WRF_EM_CORE=1
+  690  export OMP_NUM_THREADS=1
+  691  export MP_STACK_SIZE=64000000
+  692  export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+  693  export JASPERINC=/usr/include/jasper
+  694  export JASPERLIB=/usr/lib64
+  695  ./configure
+  696  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  697  cds
+  698  ls
+  699  cd CM
+  700  ls
+  701  cd rap-chem/
+  702  ls
+  703  cd WRF-brcabs/
+  704  ls
+  705  cd chem/
+  706  ls
+  707  vi emissions_driver.F 
+  708  vi chem_driver.F 
+  709  pwd
+  710  vi emissions_driver.F 
+  711  vi module_plumerise1.F 
+  712  pwd
+  713  vi module_plumerise1.F 
+  714  vi chem_driver.F 
+  715  cd //Re
+  716  ;s
+  717  cd ../Registry/
+  718  ls
+  719  grep "
+  720  grep "mgai" *
+  721  vi registry.chem 
+  722  cd ..
+  723  ls
+  724  grep -ir "mgai" .
+  725  cd Registry/
+  726  ls
+  727  vi registry.chem 
+  728  cd ../frame/
+  729  vi module_state_description.F
+  730  sl
+  731  ls
+  732  pwd
+  733  cds
+  734  ls
+  735  cd WRF4V
+  736  ls
+  737  cd WRFV4.6/
+  738  ls
+  739  cd phys/
+  740  ls
+  741  cd ../chem/
+  742  ls
+  743  vi photolysis_driver.F 
+  744  cds
+  745  ls
+  746  cd WRF46-
+  747  ls
+  748  cd WRFV4.6/
+  749  ls
+  750  cd chem/
+  751  ls
+  752  vi chem_driver.F 
+  753  vi chem_driver.f90 
+  754  vi chem_driver.F 
+  755  cd ..
+  756  ls
+  757  rm log_comp.txt 
+  758  rm errors_comp.txt 
+  759  vi config.wrf 
+  760  module purge
+  761  module load gnu/13.2.0
+  762  module load intel/2023.2.0
+  763  module load impi/2023.2.0
+  764  module load hdf5parallel/1.10.5
+  765  module load netcdf-hdf5parallel/4.7.0
+  766  module load pnetcdf/1.12.3
+  767  export WRF_CHEM=1
+  768  export WRF_KPP=1
+  769  export YACC='/usr/bin/yacc -d'
+  770  export FLEX_LIB_DIR=/usr/lib64
+  771  export WRF_EM_CORE=1
+  772  export OMP_NUM_THREADS=1
+  773  export MP_STACK_SIZE=64000000
+  774  export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+  775  export JASPERINC=/usr/include/jasper
+  776  export JASPERLIB=/usr/lib64
+  777  ls
+  778  pwd
+  779  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  780  tail -f errors_comp.txt 
+  781  vi errors_comp.txt 
+  782  jobs -l
+  783  rm errors_comp.txt 
+  784  rm log_comp.txt 
+  785  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  786  tail -f errors_comp.txt 
+  787  vi errors_comp.txt 
+  788  rm log_comp.txt 
+  789  rm errors_comp.txt 
+  790  ls
+  791  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  792  tail -f errors_comp.txt 
+  793  ls -lrt
+  794  vi errors_comp.txt 
+  795  grep -r "mgai" . > mgai.grepped.txt
+  796  vi mgai.grepped.txt 
+  797  cd re
+  798  ls
+  799  cd Registry/
+  800  ls
+  801  vi registry.chem
+  802  cd ..
+  803  ls
+  804  rm errors_comp.txt 
+  805  rm log_comp.txt 
+  806  vi mgai.grepped.txt 
+  807  cd frame/
+  808  ls
+  809  grep "mgai" *.F
+  810  vi module_state_description.F
+  811  cd ..
+  812  ls
+  813  ./clean -a
+  814  cd chem/KPP/
+  815  ls
+  816  ./clean_kpp 
+  817  cd ../..
+  818  ls
+  819  ./configure
+  820  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  821  tail -f errors_comp.txt 
+  822  cds
+  823  ls
+  824  cd WRF46-
+  825  ls
+  826  cd WRFV4.6/
+  827  ls
+  828  ls -rlt
+  829  vi errors_comp.txt 
+  830  cds
+  831  ls
+  832  cd rap-chem/
+  833  ls
+  834  cd WRFv46/
+  835  ls
+  836  cd WRF46-ms
+  837  ls
+  838  cd chem/
+  839  ls
+  840  vi emissions_driver.F 
+  841  pwd
+  842  vi emissions_driver.F 
+  843  grep "plumerise_driver" *.F
+  844  vi module_plumerise1.F 
+  845  cds
+  846  ls
+  847  cd WRF46-
+  848  ls
+  849  cd WRFV4.6/
+  850  ls
+  851  cd chem/
+  852  ls
+  853  vi chem_driver.F 
+  854  vi ../errors_comp.txt 
+  855  cds
+  856  ls
+  857  cd rap-chem/
+  858  ls
+  859  cd rap-chem
+  860  ls
+  861  vi namelist.input
+  862  cds
+  863  ls
+  864  cd WRFv
+  865  ls
+  866  cd WRFV4.6/
+  867  ls
+  868  cd chem/
+  869  ls
+  870  ls -rlt
+  871  vi module_data_soa2.F 
+  872  pwd
+  873  vi chem_driver.F 
+  874  vi emissions_driver.F 
+  875  grep "soa2_addemiss" 8.F
+  876  grep "soa2_addemiss" *.F
+  877  vi module_made_soa2.F
+  878  pwd
+  879  ls -rlt
+  880  vi chem_driver.F 
+  881  cd ..
+  882  ls
+  883  pwd
+  884  cd Registry/
+  885  vi registry.chem
+  886  pwd
+  887  vi registry.chem
+  888  cd ..
+  889  ls
+  890  ./clean -a
+  891  rm log_comp.txt 
+  892  rm errors_comp.txt 
+  893  cd chem/KPP/
+  894  ls
+  895  ./clean_kpp 
+  896  cd ../..
+  897  ls
+  898  vi config.wrf 
+  899  module purge
+  900  module load gnu/13.2.0
+  901  module load intel/2023.2.0
+  902  module load impi/2023.2.0
+  903  module load hdf5parallel/1.10.5
+  904  module load netcdf-hdf5parallel/4.7.0
+  905  module load pnetcdf/1.12.3
+  906  export WRF_CHEM=1
+  907  export WRF_KPP=1
+  908  export YACC='/usr/bin/yacc -d'
+  909  export FLEX_LIB_DIR=/usr/lib64
+  910  export WRF_EM_CORE=1
+  911  export OMP_NUM_THREADS=1
+  912  export MP_STACK_SIZE=64000000
+  913  export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+  914  export JASPERINC=/usr/include/jasper
+  915  export JASPERLIB=/usr/lib64
+  916  ./configure
+  917  command history > test.hist.txt
+  918  vi test.hist.txt 
+  919  nohup ./compile em_real > log_comp.txt 2> errors_comp.txt &
+  920  tail -f errors_comp.txt 
+  921  cds
+  922  ls
+  923  cd rap-chem/
+  924  ls
+  925  cd ..
+  926  ls
+  927  cd WRFV4.6/
+  928  ls
+  929  vi errors_comp.txt 
+  930  vi chem/chem_driver.F 
+  931  vi errors_comp.txt 
+  932  vi chem/chem_driver.f90 
+  933  cd chem/
+  934  ls
+  935  vimdiff emissions_driver.F ../../rap-chem/WRF-BrC/chem/emissions_driver.F 
+  936  vimdiff chem_driver.F ../../rap-chem/WRF-BrC/chem/chem_driver.F 
+  937  vimdiff emissions_driver.F ../../rap-chem/WRF-BrC/chem/emissions_driver.F 
+  938  vimdiff module_plumerise1.F ../../rap-chem/WRF-BrC/chem/module_plumerise1.F 
+  939  vi emissions_driver.F 
+  940  vimdiff emissions_driver.F ../../rap-chem/WRF-BrC/chem/emissions_driver.F 
+  941  vimdiff chem_driver.F ../../rap-chem/WRF-BrC/chem/chem_driver.F 
+  942  vi emissions_driver.F 
+  943  cds
+  944  ls
+  945  cd rap-chem/
+  946  ls
+  947  cd WRFv46/
+  948  ls
+  949  cd WRF46-ms/
+  950  ls
+  951  cd chem/
+  952  ls
+  953  grep "mgai" *.F
+  954  vi module_aerosols_soa_vbs_het.F
+  955  grep -ir "mgai" .
+  956  cd ..
+  957  grep -ir "mgai" .
+  958  vi chem/module_aerosols_soa_vbs_het.F 
+  959  vi chem/module_data_soa_vbs_het.F
+  960  cd Registry/
+  961  ls
+  962  vi registry.chem 
+  963  vi Registry.EM_COMMON
+  964  cd ..
+  965  ls
+  966  cd ..
+  967  ls
+  968  cds
+  969  ls
+  970  cd WRFV4.6/
+  971  ls
+  972  cd chem/
+  973  ls
+  974  vi chem_driver.F 
+  975  cds
+  976  ls
+  977  cd rap-chem/
+  978  ls
+  979  cd WRFv46/
+  980  ls
+  981  cd WRF46-ms/
+  982  ls
+  983  cd chem/
+  984  ls
+  985  grep "mgaj" *.F
+  986  vi module_data_soa_vbs_het.F
+  987  pwd
+  988  vi chem_driver.F 
+  989  vi module_aerosols_soa_vbs_het.F
+  990  vi chem_driver.F 
+  991  vi module_aerosols_soa_vbs_het.F
+  992  vi chem_driver.F 
+  993  pwd
+  994  vi chem_driver.F 
+  995  pwd
+  996  vi chem_driver.F 
+  997  vi module_data_soa_vbs_het.F
+  998  cd ../Registry/
+  999  ls
+ 1000  vi registry.chem 
+ 1001  cds
+ 1002  ls
+ 1003  cd WRFV4.6/
+ 1004  ls
+ 1005  vi config.wrf 
+ 1006  module purge
+ 1007  module load gnu/13.2.0
+ 1008  module load intel/2023.2.0
+ 1009  module load impi/2023.2.0
+ 1010  module load hdf5parallel/1.10.5
+ 1011  module load netcdf-hdf5parallel/4.7.0
+ 1012  module load pnetcdf/1.12.3
+ 1013  export WRF_CHEM=1
+ 1014  export WRF_KPP=1
+ 1015  export YACC='/usr/bin/yacc -d'
+ 1016  export FLEX_LIB_DIR=/usr/lib64
+ 1017  export WRF_EM_CORE=1
+ 1018  export OMP_NUM_THREADS=1
+ 1019  export MP_STACK_SIZE=64000000
+ 1020  export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+ 1021  export JASPERINC=/usr/include/jasper
+ 1022  export JASPERLIB=/usr/lib64
+ 1023  cd chem/
+ 1024  ls
+ 1025  vi photolysis_driver.F 
+ 1026  cds
+ 1027  ls
+ 1028  cd WRF46-
+ 1029  ls
+ 1030  cd WRFV4.6/
+ 1031  ls
+ 1032  cd chem/
+ 1033  ls
+ 1034  vi chem_driver.F 
+ 1035  cd Re
+ 1036  ls
+ 1037  cd ../Registry/
+ 1038  ls
+ 1039  vi registry.chem
+ 1040  pwd
+ 1041  cd ../chem/
+ 1042  ls
+ 1043  vi module_made_soa2.F 
+ 1044  vi aerosol_driver.F 
+ 1045  vi module_data_soa_vbs_het.F 
+ 1046  cd ../Registry/
+ 1047  ls
+ 1048  vi registry.chem
+ 1049  cd ..
+ 1050  ls
+ 1051  cd chem/
+ 1052  ls
+ 1053  grep "mgai" *.F
+ 1054  vi chem_driver.
+ 1055  vi chem_driver.F 
+ 1056  cd ..
+ 1057  ls
+ 1058  ./clean -a
+ 1059  cd chem/KPP/
+ 1060  ls
+ 1061  ./clean_kpp 
+ 1062  cd ..
+ 1063  ls
+ 1064  cd ..
+ 1065  l
+ 1066  vi config.wrf 
+ 1067  module purge
+ 1068  module load gnu/13.2.0
+ 1069  module load intel/2023.2.0
+ 1070  module load impi/2023.2.0
+ 1071  module load hdf5parallel/1.10.5
+ 1072  module load netcdf-hdf5parallel/4.7.0
+ 1073  module load pnetcdf/1.12.3
+ 1074  export WRF_CHEM=1
+ 1075  export WRF_KPP=1
+ 1076  export YACC='/usr/bin/yacc -d'
+ 1077  export FLEX_LIB_DIR=/usr/lib64
+ 1078  export WRF_EM_CORE=1
+ 1079  export OMP_NUM_THREADS=1
+ 1080  export MP_STACK_SIZE=64000000
+ 1081  export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+ 1082  export JASPERINC=/usr/include/jasper
+ 1083  export JASPERLIB=/usr/lib64
+ 1084  ls
+ 1085  ./configure
+ 1086  ls -lrt
+ 1087  rm errors_comp.txt 
+ 1088  rm log_comp.txt 
+ 1089  ls
+ 1090  command history > test
+ 1091  command history > test.hist.txt 

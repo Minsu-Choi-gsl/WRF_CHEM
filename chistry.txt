@@ -1,0 +1,1000 @@
+  294  ls
+  295  cd WRF-resolved/
+  296  ls
+  297  cd chem/
+  298  ls
+  299  vi module_data_rrtmgaeropt.F 
+  300  cd ,,'ks
+  301  cd ..
+  302  ls
+  303  cd ../WRF_wv/
+  304  ls
+  305  ls -rlt
+  306  vi log_comp.v2.txt 
+  307  vi errors_comp.v2.txt 
+  308  ./clean -a
+  309  lls
+  310  ls
+  311  cd chem/
+  312  ls
+  313  vi module_optical_averaging.F 
+  314  pwd
+  315  cp ../../WRF-brcabs/chem/module_optical_averaging.F .
+  316  ls
+  317  vi module_optical_averaging.F 
+  318  cd ..
+  319  ls
+  320  cd chem/
+  321  ls
+  322  vi optical_driver.F 
+  323  vi module_data_rrtmgaeropt.F
+  324  vi chem_driver.F 
+  325  vi module_optical_averaging.F 
+  326  cd ../phys/
+  327  ls
+  328  vi module_radiation_driver.F 
+  329  vi module_ra_rrtmg_sw.F 
+  330  cd ..
+  331  ls
+  332  ./clean -a
+  333  checkq 
+  334  vi log_comp.v2.txt 
+  335  ls
+  336  rm log_comp.v2.txt 
+  337  rm errors_comp.v2.txt 
+  338  ls
+  339  cp ../WRF-BrC/configure.wrf .
+  340  vi loadmodule.wrf.sh 
+  341  module purge
+  342  #module load gnu
+  343  module load gnu/13.2.0
+  344  module load intel/2022.1.2
+  345  module load impi/2022.1.2
+  346  module load hdf5/1.10.4
+  347  export WRF_CHEM=1
+  348  export WRF_KPP=1
+  349  export YACC='/usr/bin/yacc -d'
+  350  export FLEX_LIB_DIR=/usr/lib64
+  351  export WRF_EM_CORE=1
+  352  export OMP_NUM_THREADS=1
+  353  export MP_STACK_SIZE=64000000
+  354  export NETCDF4=1
+  355  export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+  356  export LD_LIBRARY_PATH=/apps/netcdf/4.6.1/intel/16.1.150/lib:$LD_LIBRARY_PATH
+  357  export NETCDF=/apps/netcdf/4.6.1/intel/16.1.150
+  358  export JASPERINC=/usr/include/jasper
+  359  export JASPERLIB=/usr/lib64
+  360  export CPATH=/usr/include/tirpc:$CPATH
+  361  nohup ./compile em_real > log_comp.v2.txt 2> errors_comp.v2.txt &
+  362  tail -f errors_comp.v2.txt 
+  363  ls
+  364  vi log_comp.v2.txt 
+  365  cd ../wrfchem/
+  366  ls
+  367  ./clean.sh 
+  368  ls
+  369  mv *.exe expandwv_exe/
+  370  ln -s ../WRF_wv/main/*.exe .
+  371  ls
+  372  sbatch job.chem
+  373  checkq 
+  374  ls
+  375  vi rsl.error.0000 
+  376  vi namelist.input
+  377  ./clean.sh 
+  378  sbatch job.chem
+  379  checkq
+  380  tail -f rsl.error.0000
+  381  l
+  382  ls
+  383  vi rsl.error.0000 
+  384  grep -i "ERROR" rsl.error.*
+  385  checkq 
+  386  vi rsl.out.0000 
+  387  cd ../WRF_wv/
+  388  ls
+  389  cd chem/
+  390  ls
+  391  vi optical_driver.F 
+  392  vi ../../wrfchem/rsl.error.0000 
+  393  vi optical_driver.F 
+  394  vi module_optical_averaging.F 
+  395  vimdiff module_optical_averaging.F ../../../tools/src_modification/resolved_wv_orig/WRF-chem_resolved/chem/module_optical_averaging.F 
+  396  grep "nspint" *.F
+  397  cds
+  398  ls
+  399  cd rasp
+  400  ls
+  401  cd rap-chem/
+  402  ls
+  403  cd WRF_wv/
+  404  ls
+  405  cd phys/
+  406  ls
+  407  vi module_radiation_driver.
+  408  vi module_radiation_driver.F 
+  409  cd ../chem/
+  410  ls
+  411  vi module_optical_averaging.F 
+  412  cd ..
+  413  ls
+  414  vi loadmodule.wrf.sh 
+  415  module purge
+  416  #module load gnu
+  417  module load gnu/13.2.0
+  418  module load intel/2022.1.2
+  419  module load impi/2022.1.2
+  420  module load hdf5/1.10.4
+  421  export WRF_CHEM=1
+  422  export WRF_KPP=1
+  423  export YACC='/usr/bin/yacc -d'
+  424  export FLEX_LIB_DIR=/usr/lib64
+  425  export WRF_EM_CORE=1
+  426  export OMP_NUM_THREADS=1
+  427  export MP_STACK_SIZE=64000000
+  428  export NETCDF4=1
+  429  export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+  430  export LD_LIBRARY_PATH=/apps/netcdf/4.6.1/intel/16.1.150/lib:$LD_LIBRARY_PATH
+  431  export NETCDF=/apps/netcdf/4.6.1/intel/16.1.150
+  432  export JASPERINC=/usr/include/jasper
+  433  export JASPERLIB=/usr/lib64
+  434  export CPATH=/usr/include/tirpc:$CPATH
+  435  ./compile em_real
+  436  ls
+  437  cd cheem
+  438  ls
+  439  cd chem/
+  440  ls
+  441  vi module_data_rrtmgaeropt.F
+  442  vi module_optical_averaging.F 
+  443  cd ..
+  444  ls
+  445  ./compile em_real
+  446  cd chem/
+  447  vi module_optical_averaging.F 
+  448  cd ..
+  449  ls
+  450  ./compile em_real
+  451  cd chem/
+  452  vi module_optical_averaging.F 
+  453  grep "wavmin" *.F
+  454  cd ../phys/
+  455  grep "wavmin" *.F
+  456  cd ../dyn_em/
+  457  grep "wavmin" *.F
+  458  ls
+  459  cd ../chem/
+  460  ls
+  461  vi module_data_rrtmgaeropt.F
+  462  vi module_optical_averaging.F 
+  463  vi optical_driver.F 
+  464  cd ../
+  465  ./compile em_real
+  466  vi chem/module_optical_averaging.F 
+  467  ./compile em_real
+  468  vi chem/module_optical_averaging.F 
+  469  ./compile em_real
+  470  vi chem/module_optical_averaging.F 
+  471  ./compile em_real
+  472  vi chem/module_optical_averaging.F 
+  473  ./compile em_real
+  474  vi chem/module_optical_averaging.F 
+  475  ./compile em_real
+  476  vi chem/module_optical_averaging.F 
+  477  ./compile em_real
+  478  vi chem/module_optical_averaging.F 
+  479  ./compile em_real
+  480  ls
+  481  vi chem/module_optical_averaging.F 
+  482  ./compile em_real
+  483  vi chem/module_optical_averaging.F 
+  484  ./compile em_real
+  485  vi chem/module_optical_averaging.F 
+  486  cd chem/
+  487  grep "wavmin" *.F
+  488  cd ..
+  489  grep -ir "wavmin" .
+  490  vi chem/module_data_rrtmgaeropt.F
+  491  vi chem/module_optical_averaging.F 
+  492  vi chem/module_data_rrtmgaeropt.F
+  493  vi chem/module_optical_averaging.F 
+  494  vi chem/module_data_rrtmgaeropt.F
+  495  vi chem/module_optical_averaging.F 
+  496  pwd
+  497  ls
+  498  grep -ir "wvmin" .
+  499  grep -ir "wavmin" .
+  500  vi phys/module_ra_cam.F
+  501  ls
+  502  vi chem/module_optical_averaging.F 
+  503  vi ../wrfchem/namelist.input
+  504  vi chem/module_optical_averaging.F 
+  505  cd phys/
+  506  s
+  507  ls
+  508  grep "tauaer300" *
+  509  vi module_ra_gsfcsw.F
+  510  vi module_ra_rrtmg_sw.F 
+  511  vi module_radiation_driver.F
+  512  cd ../dyn_em/
+  513  ls
+  514  grep "tauaer300" *
+  515  vi start_em.F 
+  516  vi solve_em.F 
+  517  vi module_first_rk_step_part1.F 
+  518  cd ..
+  519  ls
+  520  vi loadmodule.wrf.sh 
+  521  module purge
+  522  #module load gnu
+  523  module load gnu/13.2.0
+  524  module load intel/2022.1.2
+  525  module load impi/2022.1.2
+  526  module load hdf5/1.10.4
+  527  export WRF_CHEM=1
+  528  export WRF_KPP=1
+  529  export YACC='/usr/bin/yacc -d'
+  530  export FLEX_LIB_DIR=/usr/lib64
+  531  export WRF_EM_CORE=1
+  532  export OMP_NUM_THREADS=1
+  533  export MP_STACK_SIZE=64000000
+  534  export NETCDF4=1
+  535  export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+  536  ecds
+  537  ls
+  538  cd rap-chem/
+  539  ls
+  540  cd WRF_wv/
+  541  ls
+  542  cd phys/
+  543  ls
+  544  vi module_ra_rrtmg_sw.F
+  545  vi module_ra_rrtmg_sw.F.minsu 
+  546  vi module_ra_rrtmg_sw.F
+  547  rm module_ra_rrtmg_sw.F
+  548  cp module_ra_rrtmg_sw.F.minsu module_ra_rrtmg_sw.F
+  549  vi module_ra_rrtmg_sw.F
+  550  cd .
+  551  cd ..
+  552  ls
+  553  vi loadmodule.wrf.sh 
+  554  module purge
+  555  #module load gnu
+  556  module load gnu/13.2.0
+  557  module load intel/2022.1.2
+  558  module load impi/2022.1.2
+  559  module load hdf5/1.10.4
+  560  export WRF_CHEM=1
+  561  export WRF_KPP=1
+  562  export YACC='/usr/bin/yacc -d'
+  563  export FLEX_LIB_DIR=/usr/lib64
+  564  export WRF_EM_CORE=1
+  565  export OMP_NUM_THREADS=1
+  566  export MP_STACK_SIZE=64000000
+  567  export NETCDF4=1
+  568  export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+  569  export LD_LIBRARY_PATH=/apps/netcdf/4.6.1/intel/16.1.150/lib:$LD_LIBRARY_PATH
+  570  export NETCDF=/apps/netcdf/4.6.1/intel/16.1.150
+  571  export JASPERINC=/usr/include/jasper
+  572  export JASPERLIB=/usr/lib64
+  573  export CPATH=/usr/include/tirpc:$CPATH
+  574  ./compile em_Real
+  575  ./compile em_real
+  576  vi phys/module_ra_rrtmg_sw.F
+  577  ./compile em_real
+  578  vi phys/module_ra_rrtmg_sw.F
+  579  ./compile em_real
+  580  vi phys/module_ra_rrtmg_sw.F
+  581  vi phys/module_ra_rrtmg_sw.f90 
+  582  vi phys/module_ra_rrtmg_sw.F
+  583  ./compile em_real
+  584  vi phys/module_ra_rrtmg_sw.F
+  585  cd phys/
+  586  cp module_ra_rrtmg_sw.F.minsu module_ra_rrtmg_sw.F
+  587  cd ..
+  588  ls
+  589  vi phys/module_ra_rrtmg_sw.F
+  590  ./compile em_real
+  591  ls
+  592  cd ../wrfchem/
+  593  ls
+  594  vi namelist.input
+  595  rm /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/wrfout_d01_2019-08-03_0*
+  596  sbatch job.chem
+  597  tail -f rsl.error.0*
+  598  tail -f rsl.error.0000
+  599  cds
+  600  ls
+  601  cd rap-chem/
+  602  ls
+  603  cd wrfchem/
+  604  ls
+  605  ./clean.sh 
+  606  cp job.chem.orig job.chem
+  607  vi job.chem
+  608  ls
+  609  vi namelist.input
+  610  rm /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/wrfout_d01_2019-08-03_00_00_00 
+  611  sbatch job.chem
+  612  checkq
+  613  cd /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon
+  614  ls
+  615  cd base/
+  616  ls -rlt
+  617  pwd
+  618  cd ..
+  619  ls
+  620  ls -rlt
+  621  cd first_trial/
+  622  ls
+  623  cd ..
+  624  ls
+  625  ls -rlt
+  626  cd 0.8XOCEC/
+  627  ls
+  628  ls -rlt
+  629  cd ..
+  630  ls
+  631  cd 1.2XOCEC/
+  632  ls
+  633  ls -rlt
+  634  cd ..
+  635  ls
+  636  cd 1.0XOCEC/
+  637  ls
+  638  cd ../0.8XOCEC/
+  639  ls
+  640  ls -rlt
+  641  cd ../runwrfun1
+  642  cd runwrf1
+  643  ls
+  644  cd ..
+  645  ls
+  646  cd runwr1
+  647  ls
+  648  cd runwrf1/
+  649  ls
+  650  ls -rlt
+  651  cd run_20190803/
+  652  ls
+  653  ./clean.sh 
+  654  ls
+  655  cd ..
+  656  ls
+  657  cd output/
+  658  ls
+  659  cd 20190803/
+  660  ls
+  661  ls -rlt
+  662  rm wrfout_d01_2019-08-04_00_00_00
+  663  ls-rlt
+  664  ls -rlt
+  665  pwd
+  666  cd ..
+  667  ls
+  668  cd ../run_20190803/
+  669  ls
+  670  cd ..ls
+  671  cd ..
+  672  ls
+  673  cd ../run
+  674  ls
+  675  vi namelist.input
+  676  ls -rlt
+  677  ncview wrfinput_d01 
+  678  ln -sf wrfchemi_00z_d01 
+  679  ln -sf wrfchemi_12z_d01 
+  680  rm wrfchemi_*
+  681  ln -s /scratch1/BMC/wrf-chem/minsusee/tools/wrfchem12km_input/sunday/wrfchemi_* .
+  682  ls
+  683  ls -rlt
+  684  ls
+  685  vi namelist.input
+  686  sbatch job.chem
+  687  checkq 
+  688  ls
+  689  checkq 
+  690  ls
+  691  checkq
+  692  ls
+  693  checkq
+  694  sl
+  695  checkq
+  696  ls
+  697  cds
+  698  ls
+  699  cd rap
+  700  ls
+  701  checkq 
+  702  cd rap-chem/
+  703  ls
+  704  cd wrfchem/
+  705  ls
+  706  vi namelist.input
+  707  cd /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/
+  708  ls
+  709  cd ..
+  710  ls
+  711  cd run
+  712  ls
+  713  ./clean.sh 
+  714  ls
+  715  ls -lrt
+  716  ln -sf wrfbdy_d01
+  717  rm wrfbdy_d01
+  718  ln -sf wrfinput_d01 
+  719  rm wrfinput_d01 
+  720  ln -sf wrfchemi_00z_d01 
+  721  ln -sf wrfchemi_12z_d01 
+  722  rm wrfchemi_*
+  723  ln -s /scratch1/BMC/wrf-chem/minsusee/tools/wrfchem12km_input/saturday/wrfchemi_* .
+  724  ln -s wrfbdy_d01_2019-08-03 wrfbdy_d01
+  725  ln -s ../0.8XOCEC/wrfinput_d01_2019-08-04 wrfinput_d01
+  726  ls
+  727  cd ../0.8XOCEC/
+  728  ls
+  729  ls -rlt
+  730  cp ../1.2XOCEC/get.cgrid.sh .
+  731  vi get.cgrid.sh 
+  732  module spider nco
+  733  module load nco/5.1.6
+  734  ./get.cgrid.sh 
+  735  ls -lrt
+  736  checkq 
+  737  ls
+  738  checkq
+  739  ls -rlt
+  740  cds
+  741  ls
+  742  cd rap-chem/
+  743  ls
+  744  cd wf
+  745  cd wrfchem/
+  746  ls
+  747  vi rsl.error.0000 
+  748  ./clean.sh 
+  749  ls
+  750  ls -ll
+  751  ln -sf wrfchemi_00z_d01 
+  752  ln -sf wrfchemi_12z_d01 
+  753  rm wrfchemi_*
+  754  ln -s /scratch1/BMC/wrf-chem/minsusee/tools/wrfchem12km_input/sunday/* .
+  755  ln -sf wrfbdy_d01
+  756  ls
+  757  rm wrfbdy_d01
+  758  rm wrfinput_d01
+  759  ln -s wrfbdy_d01_2019-08-04 wrfbdy_d01
+  760  pwd
+  761  vi namelist.input
+  762  cd /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon
+  763  ls
+  764  ls -lrt
+  765  rm wrfout_d01_2019-08-04_00_00_00
+  766  cd base/
+  767  ls
+  768  cd ..
+  769  ls -rlt
+  770  cd ..
+  771  ls
+  772  cd 1.0XOCEC/
+  773  ls
+  774  cd ..
+  775  ls
+  776  cd run
+  777  ls
+  778  ./clean.sh 
+  779  ls
+  780  cd ..
+  781  ls
+  782  cd volumeavg-feedbackon/
+  783  ls
+  784  ls -rlt
+  785  cd /scratch1/BMC/wrf-chem/minsusee/rap-chem/wrfchem
+  786  ls
+  787  ncdump -h wrfinput_d01_2019-08-04_wfire
+  788  ncdump -h wrfinput_d01_2019-08-04_wfire_brc 
+  789  ls
+  790  vi namelist.input
+  791  cp wrfinput_d01_2019-08-04_wfire_brc /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/wrfinput_d01_2019-08-04
+  792  cd output/
+  793  cp get.cgrid.sh /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/
+  794  ls
+  795  vi get.cgrid.sh 
+  796  ls -rlt
+  797  pwd
+  798  vi get.cgrid.sh 
+  799  cd /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/
+  800  ls -rlt
+  801  vi get.cgrid.sh 
+  802  mv wrfinput_d01_2019-08-04 wrfinput_d01_2019-08-04_resolved
+  803  vi get.cgrid.sh 
+  804  module spider Anaconda
+  805  module spider nco
+  806  module load nco/5.1.6
+  807  ./get.cgrid.sh 
+  808  ls -lrt
+  809  vi get.cgrid.sh 
+  810  ./get.cgrid.sh 
+  811  ls -lrt
+  812  pwd
+  813  cds
+  814  cd rap-chem/wrfchem/
+  815  ln -s /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/wrfinput_d01_2019-08-04_resolved wrfinput_d01
+  816  ls
+  817  ncdump wrfbdy_d01
+  818  cds
+  819  cd rap-chem/wrfchem/
+  820  ls
+  821  ncdump -h wrfbdy_d01
+  822  ls
+  823  vi namelist.input
+  824  ls
+  825  sbatch job.chem
+  826  cds
+  827  ls
+  828  cd rap-chem/
+  829  ls
+  830  cd wrfchem/
+  831  ls
+  832  cd run
+  833  ls
+  834  vi rsl.error.0000 
+  835  ./clean.sh 
+  836  ls
+  837  ln -sf wrfbdy_d01
+  838  rm wrfbdy_d01
+  839  ln -s wrfbdy_d01_2019-08-05 wrfbdy_d01
+  840  ls wrfchemi_* -ll
+  841  ln -sf wrfchemi_00z_d01
+  842  ln -sf wrfchemi_12z_d01 
+  843  rm wrfchemi_*
+  844  ln -s /scratch1/BMC/wrf-chem/minsusee/tools/wrfchem12km_input/weekday/* .
+  845  ls
+  846  vi namelist.input
+  847  cd /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/
+  848  ls
+  849  ls -rlt
+  850  rm wrfout_d01_2019-08-05_00_00_00 
+  851  pwd
+  852  cds
+  853  cd rap-chem/
+  854  ls
+  855  cd wrfchem/
+  856  cp wrfinput_d01_2019-08-05_wfire /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/
+  857  (base) [Minsu.Choi@hfe04 volumeavg-feedbackon]$ cds
+  858  (base) [Minsu.Choi@hfe04 minsusee]$ cd rap-chem/
+  859  (base) [Minsu.Choi@hfe04 rap-chem]$ ls
+  860  WPS    WRF      WRF-BrCabs  WRF-ocabs     WRF_wv  bug-fix    code_refine  get.cgrid.sh  hrrr-chem  rap-chem        run     speciation
+  861  WPSvX  WRF-BrC  WRF-brcabs  WRF-resolved  WRFv46  code-modi  data         hrly_rave     plot       rap-chem-nvpoa  script  wrfchem
+  862  (base) [Minsu.Choi@hfe04 rap-chem]$ cd wrfchem/
+  863  pwd
+  864  cd /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/
+  865  ls -lrt
+  866  mv wrfinput_d01_2019-08-05_wfire wrfinput_d01_2019-08-05_resolved
+  867  vi get.cgrid.sh 
+  868  module spider nco
+  869  module load nco/5.1.6
+  870  ./get.cgrid.sh 
+  871  ls -lrt
+  872  cds
+  873  ls
+  874  cd rap-chem/
+  875  ls
+  876  cd wrfchem/
+  877  ls
+  878  ls -lrt
+  879  ln -sf /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/wrfinput_d01_2019-08-04_resolved
+  880  ln -sf wrfinput_d01
+  881  rm wrfinput_d01
+  882  ln -s /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/wrfinput_d01_2019-08-05_resolved wrfinput_d01
+  883  ls
+  884  ls -lrt
+  885  vi namelist.input
+  886  sbatch job.chem
+  887  checkq
+  888  cds
+  889  ls
+  890  cd rap-chem/
+  891  ls
+  892  cd wrfchem/
+  893  ls
+  894  vi rsl.error.0000 
+  895  ./clean.sh 
+  896  ls -lrt
+  897  ln -sf wrfbdy_d01
+  898  rm wrfbdy_d01
+  899  ln -s wrfbdy_d01_2019-08-06 wrfbdy_d01
+  900  cp wrfinput_d01_2019-08-06_wfire_brc /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/wrfinput_d01_2019-08-06_resolved
+  901  ln -sf wrfinput_d01
+  902  rm wrfinput_d01
+  903  ls
+  904  vi namelist.input
+  905  ln -sf wrfinput_d01_2019-08-04_resolved
+  906  ls -lrt
+  907  rm wrfinput_d01_2019-08-04_resolved
+  908  cd /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/
+  909  ls -lrt
+  910  vi get.cgrid.sh 
+  911  module spider nco
+  912  module load nco/5.1.6
+  913  ./get.cgrid.sh 
+  914  ls -lrt
+  915  pwd
+  916  cds
+  917  cd rap-chem/
+  918  ls
+  919  cd rap-chem/wrf
+  920  cd wrfchem/
+  921  ls
+  922  ln -s /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/wrfinput_d01_2019-08-06_resolved wrfinput_d01
+  923  ls
+  924  sbatch job.chem
+  925  cd /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon
+  926  ls -lrt
+  927  ncview wrfout_d01_2019-08-0*
+  928  ls
+  929  cd ../run
+  930  ls
+  931  ls -lrt
+  932  cd ../0.8XOCEC/
+  933  ls
+  934  ls -lrt
+  935  cd ..
+  936  ls
+  937  cd run
+  938  l
+  939  ls
+  940  vi namelist.input
+  941  ls -lrt
+  942  ls
+  943  ln -sf wrfbdy_d01
+  944  rm wrfbdy_d01
+  945  ln -s wrfbdy_d01_2019-08-04 wrfbdy_d01
+  946  vi namelist.input
+  947  cd ../0.8XOCEC/
+  948  ls
+  949  ls -lrt
+  950  cd ..
+  951  ls
+  952  cd 1.2XOCEC/
+  953  ls
+  954  ls -rlt
+  955  ls
+  956  cd..
+  957  ls
+  958  cd ..
+  959  ls
+  960  cd volumeavg-feedbackon/
+  961  ls
+  962  cd ..
+  963  ls
+  964  cd ../runwrf
+  965  ls
+  966  cd runwrf1/
+  967  ls
+  968  cd output/
+  969  ls
+  970  cd 20190803/
+  971  ls
+  972  ls -lrt
+  973  cd ../..
+  974  ls
+  975  cd ..
+  976  ls
+  977  cd 1.2XOCEC/
+  978  ls
+  979  cd ..
+  980  ls
+  981  cd runwrf1/
+  982  ls
+  983  cd output/
+  984  ls
+  985  cd 20190803/
+  986  ls
+  987  mv * ../../../0.8XOCEC/
+  988  cd ../../../0.8XOCEC/
+  989  ls
+  990  ls -rlt
+  991  vi get.cgrid.sh 
+  992  cd ..
+  993  ls
+  994  cd run
+  995  ls
+  996  vi namelist.input
+  997  ls -lrt
+  998  sbatch job.chem
+  999  checkq
+ 1000  ncdump -h wrfinput_d01 
+ 1001  cds
+ 1002  ls
+ 1003  cd /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/w
+ 1004  cd /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/
+ 1005  ls
+ 1006  ls -rlt
+ 1007  rm wrfout_d01_2019-08-07_00_00_00
+ 1008  ls -lrt
+ 1009  ncview wrfout_d01_2019-08-0*
+ 1010  cd ..
+ 1011  ls
+ 1012  cd 0.8XOCEC/
+ 1013  ls
+ 1014  ls -rlt
+ 1015  rm wrfout_d01_2019-08-05_00_00_00 
+ 1016  ls -rlt
+ 1017  ncview wrfout_d01_2019-08-04_*
+ 1018  ls -rlt
+ 1019  vi get.cgrid.sh 
+ 1020  module spider nco
+ 1021  module load nco/5.1.6
+ 1022  ./get.cgrid.sh 
+ 1023  vi get.cgrid.sh 
+ 1024  ./get.cgrid.sh 
+ 1025  ls -rlt
+ 1026  ls -lrt
+ 1027  cd ../run
+ 1028  ls
+ 1029  vi rsl.error.0000 
+ 1030  ./clean.sh 
+ 1031  ln -sf wrfbdy_d01
+ 1032  rm wrfbdy_d01
+ 1033  ln -s wrfbdy_d01_2019-08-05 wrfbdy_d01
+ 1034  ln -sf wrfinput_d01 
+ 1035  rm wrfinput_d01 
+ 1036  ln -s ../0.8XOCEC/wrfinput_d01_2019-08-05 wrfinput_d01
+ 1037  ls
+ 1038  ls -ll
+ 1039  ln -sf wrfchemi_00z_d01 
+ 1040  ln -sf wrfchemi_12z_d01 
+ 1041  rm wrfchemi_*
+ 1042  ln -s /scratch1/BMC/wrf-chem/minsusee/tools/wrfchem12km_input/weekday/* .
+ 1043  ls
+ 1044  vi namelist.input
+ 1045  sbatch job.chem
+ 1046  checkq
+ 1047  tail -f rsl.error.0000 
+ 1048  checkq
+ 1049  ls
+ 1050  tail -f rsl.out.0000 
+ 1051  tail -f rsl.error.0000 
+ 1052  cds
+ 1053  ls
+ 1054  cd tools/
+ 1055  ls
+ 1056  cd src_modification/
+ 1057  ls
+ 1058  cd resolved_wv_orig/
+ 1059  ls
+ 1060  ls -rlt
+ 1061  cd WRF-chem_resolved/
+ 1062  ls
+ 1063  cd phys/
+ 1064  ls
+ 1065  vi module_ra_rrtmg_sw.F 
+ 1066  cd ../chem/
+ 1067  ls
+ 1068  vi module_data_rrtmgaeropt.F 
+ 1069  cds
+ 1070  ls
+ 1071  cd rap-chem/
+ 1072  ls
+ 1073  cd wrfchem/
+ 1074  ls
+ 1075  checkq 
+ 1076  tail -f rsl.error.0000 
+ 1077  ./clean.sh 
+ 1078  sbatch job.chem
+ 1079  checkq
+ 1080  ls
+ 1081  tail -f rsl.error.0000 
+ 1082  vi namelist.input
+ 1083  ncview /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/wrfout_d01_2019-08-06_*
+ 1084  cd output/
+ 1085  ls
+ 1086  cd base
+ 1087  ls -rlt
+ 1088  ncview wrfout_d01_2019-08-06_00_00_00 wrfout_d01_2019-08-06_06_00_00
+ 1089  ls -lrt
+ 1090  ncview /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/wrfout_d01_2019-08-06_*
+ 1091  cds
+ 1092  ls
+ 1093  cd rap-chem/
+ 1094  ls
+ 1095  cds
+ 1096  ls
+ 1097  cd tools/
+ 1098  ls
+ 1099  cd src_modification/
+ 1100  ls
+ 1101  cd resolved_wv_orig/
+ 1102  ls
+ 1103  cd WRF-chem_resolved/
+ 1104  ls
+ 1105  grep -ir "waer" .
+ 1106  vi chem/module_aer_opt_out.F
+ 1107  cds
+ 1108  ls
+ 1109  cd rap-chem/
+ 1110  ls
+ 1111  cd WRF_wv+brc/
+ 1112  ls
+ 1113  cd chem/
+ 1114  ls
+ 1115  vi module_aer_opt_out.F 
+ 1116  grep "module_aer_opt_out" *.F
+ 1117  vi chem_driver.F 
+ 1118  vi module_aer_opt_out.F 
+ 1119  vi module_optical_averaging.F 
+ 1120  cds
+ 1121  ls
+ 1122  cd rap-chem/
+ 1123  ls
+ 1124  cd wrfchem/
+ 1125  ls
+ 1126  checkq 
+ 1127  ls
+ 1128  vi namelist.input
+ 1129  vi rsl.error.0000
+ 1130  ./clean.sh 
+ 1131  cds
+ 1132  ls
+ 1133  cd tools/
+ 1134  ls
+ 1135  cd src_modification/
+ 1136  ls
+ 1137  cd resolved_wv_orig/
+ 1138  ls
+ 1139  cd WRF-chem_resolved/
+ 1140  ls
+ 1141  cd chem/
+ 1142  vi module_optical_averaging.F 
+ 1143  cds
+ 1144  ls
+ 1145  cd rap-chem/
+ 1146  ls
+ 1147  cd wrfchem/
+ 1148  ls
+ 1149  vi namelist.input
+ 1150  pwd
+ 1151  cd /scratch2/BMC/ap-fc/minsusee/wrfchem/volumeavg-feedbackon/
+ 1152  ls
+ 1153  ls -rlt
+ 1154  cd 2nd_trial/
+ 1155  ls
+ 1156  cd ..
+ 1157  ls -rlt
+ 1158  rm wrfout_d01_2019-08-07_00_00_00 
+ 1159  ls -rlt
+ 1160  mkdir 3rd_trial
+ 1161  mv wrfout_d01_2019-08-06_* 3rd_trial/
+ 1162  ls -rlt
+ 1163  cds
+ 1164  ls
+ 1165  cd rap-chem/
+ 1166  ls
+ 1167  cd wrfchem/
+ 1168  ls
+ 1169  sbatch job.chem
+ 1170  checkq
+ 1171  ls
+ 1172  checkq
+ 1173  ls *.exe -lrt
+ 1174  mv *.exe expandwv_exe/
+ 1175  ln -s ../WRF_wv+brc/main/*.exe .
+ 1176  ls -lrt
+ 1177  checkq 
+ 1178  ls
+ 1179  cds
+ 1180  ls
+ 1181  cd rap-chem/
+ 1182  ls
+ 1183  cd wrfchem/
+ 1184  ls
+ 1185  cd output/
+ 1186  ls
+ 1187  ls -lrt
+ 1188  cd base
+ 1189  ls
+ 1190  ncview wrfout_d01_2019-08-06_18_00_00 
+ 1191  ls
+ 1192  ls -lrt
+ 1193  cd ..
+ 1194  ls
+ 1195  ls -lrt
+ 1196  checkq 
+ 1197  ls
+ 1198  cd ..
+ 1199  ls -rlt
+ 1200  ls
+ 1201  vi namelist.input
+ 1202  cds
+ 1203  ls
+ 1204  cd rap-chem/
+ 1205  ls
+ 1206  cd ..
+ 1207  ls
+ 1208  cd rap-chem/
+ 1209  ls
+ 1210  mkdir WRF_hrlyfire
+ 1211  cd WRF_hrlyfire/
+ 1212  ls
+ 1213  pwd
+ 1214  ls -lrt
+ 1215  ls
+ 1216  rm slurm-28355614.out 
+ 1217  ls
+ 1218  cd chem/
+ 1219  ls
+ 1220  grep "ebu" *.F
+ 1221  vi module_add_emiss_burn.F 
+ 1222  vimdiff module_add_emiss_burn.F /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF_wv+brc/chem/module_add_emiss_burn.F 
+ 1223  vi module_add_emiss_burn.F 
+ 1224  vimdiff module_add_emiss_burn.F /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF_wv+brc/chem/module_add_emiss_burn.F 
+ 1225  vi module_add_emiss_burn.F 
+ 1226  grep "bb_dcycle" *.F
+ 1227  vimdiff module_add_emiss_burn.F module_add_emiss_burn.bk.F 
+ 1228  grep "wrffire" *.F
+ 1229  vi convert_emiss.F 
+ 1230  vimdiff convert_emiss.F /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF_wv+brc/chem/convert_emiss.F 
+ 1231  cd ..
+ 1232  ls
+ 1233  cp ../WRF_wv/loadmodule.wrf.sh .
+ 1234  vi loadmodule.wrf.sh 
+ 1235  module purge
+ 1236  #module load gnu
+ 1237  module load gnu/13.2.0
+ 1238  module load intel/2022.1.2
+ 1239  module load impi/2022.1.2
+ 1240  module load hdf5/1.10.4
+ 1241  export WRF_CHEM=1
+ 1242  export WRF_KPP=1
+ 1243  export YACC='/usr/bin/yacc -d'
+ 1244  export FLEX_LIB_DIR=/usr/lib64
+ 1245  export WRF_EM_CORE=1
+ 1246  export OMP_NUM_THREADS=1
+ 1247  export MP_STACK_SIZE=64000000
+ 1248  export NETCDF4=1
+ 1249  export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+ 1250  export LD_LIBRARY_PATH=/apps/netcdf/4.6.1/intel/16.1.150/lib:$LD_LIBRARY_PATH
+ 1251  export NETCDF=/apps/netcdf/4.6.1/intel/16.1.150
+ 1252  export JASPERINC=/usr/include/jasper
+ 1253  export JASPERLIB=/usr/lib64
+ 1254  export CPATH=/usr/include/tirpc:$CPATH
+ 1255  ls
+ 1256  ./compile em_real
+ 1257  ls -lrt
+ 1258  ls
+ 1259  checkq
+ 1260  cd ../WRF_wv+brc/
+ 1261  ls
+ 1262  grep -ir "tauaer" .
+ 1263  cp Registry/registry.chem /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF_hrlyfire/Registry/
+ 1264  vi /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF_hrlyfire/Registry/registry.chem 
+ 1265  cp phys/module_radiation_driver.F /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF_hrlyfire/phys/
+ 1266  cp phys/module_ra_rrtmg_sw.F /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF_hrlyfire/phys/
+ 1267  cp chem/module_optical_averaging.F /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF_hrlyfire/chem
+ 1268  vimdiff chem/chem_driver.F /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF_hrlyfire/chem/chem_driver.F 
+ 1269  cp chem/chem_driver.F /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF_hrlyfire/chem
+ 1270  cp chem/chemics_init.F /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF_hrlyfire/chem
+ 1271  cp chem/optical_driver.F /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF_hrlyfire/chem
+ 1272  cp chem/module_aer_opt_out.F /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF_hrlyfire/chem
+ 1273  ls
+ 1274  cd dyn_
+ 1275  cd dyn_em/
+ 1276  grep "tauaer" *
+ 1277  grep "tauaer" *.F
+ 1278  cp start_em.F  /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF_hrlyfire/dyn_em/
+ 1279  cp module_first_rk_step_part1.F  /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF_hrlyfire/dyn_em/
+ 1280  cd ../phys/
+ 1281  grep "tauaer" *.F
+ 1282  cd ..
+ 1283  ls
+ 1284  cd chem/
+ 1285  ls
+ 1286  grep "tauaer" *.F
+ 1287  vimdiff chemics_init.F /scratch1/BMC/wrf-chem/minsusee/rap-chem/WRF_hrlyfire/chem/chemics_init.F 
+ 1288  cds
+ 1289  ls
+ 1290  cd WRFV4.6
+ 1291  ls
+ 1292  vi test.txt 
+ 1293  command history > chistry.txt

@@ -1,0 +1,94 @@
+./frame/module_configure.f90:  P_mgai = 1 ; F_mgai = .FALSE. 
+./frame/module_state_description.f90:  INTEGER, PARAMETER :: PARAM_mgai = 5
+./frame/module_state_description.f90:  INTEGER            ::     P_mgai = 1
+./frame/module_state_description.f90:  LOGICAL            ::     F_mgai = .FALSE.
+./frame/module_state_description.F:  INTEGER, PARAMETER :: PARAM_mgai = 5
+./frame/module_state_description.F:  INTEGER            ::     P_mgai = 1
+./frame/module_state_description.F:  LOGICAL            ::     F_mgai = .FALSE.
+./chem/module_gocart_dust_afwa.f90:         mgai,mgaj,caai,caaj,kai,kaj,                                      &
+./chem/module_gocart_dust_afwa.f90:         INTENT(INOUT ) ::            mgai,mgaj,caai,caaj,kai,kaj
+./chem/module_gocart_dust_afwa.f90:                  mgai(i,kts,j) = mgai(i,kts,j)        &
+./chem/module_made_soa2.F:                             mgai,mgaj,caai,caaj,kai,kaj,          &
+./chem/module_made_soa2.F:                            mgai,mgaj,caai,caaj,kai,kaj           
+./chem/module_made_soa2.F:        cblk(1,vmgai) = mgai(i,k,j) ! chem(i,k,j,p_mgai)
+./chem/module_made_soa2.F:        mgai(i,k,j) = cblk(1,vmgai)
+./chem/module_made_soa2.F:                         mgai,mgaj,caai,caaj,kai,kaj,                &
+./chem/module_made_soa2.F:         INTENT(IN ) :: alt,h2oaj,h2oai,mgai,mgaj,caai,caaj,kai,kaj
+./chem/module_made_soa2.F:                               mgai(ii,k,jj) + mgaj(ii,k,jj) + \
+./chem/module_made_soa2.F:                               mgai,mgaj,caai,caaj,kai,kaj,                    &
+./chem/module_made_soa2.F:                             mgai,mgaj,caai,caaj,kai,kaj
+./chem/module_made_soa2.F:         cblk(1,VMGAI ) =   max(epsilc,mgai(i,k,j)*convfac2)
+./chem/module_made_soa2.F:    cblk(lcell,vmgaj) = cblk(lcell,vmgaj) + cblk(lcell,vmgai)*fm3
+./chem/module_made_soa2.F:          cblk(lcell,vmgai) = cblk(lcell,vmgai)*phm3
+./chem/module_made_soa2.F:        WI(8) = DBLE((cblk(lcell,vmgaj)  + cblk(lcell,vmgai)) &
+./chem/module_made_soa2.F:        cblk(lcell,vmgai) = fraci*amg
+./chem/module_made_soa2.F:          mgfac*cblk(lcell,vmgai) + cafac*cblk(lcell,vcaai) + kfac*cblk(lcell,vkai)
+./chem/module_made_soa2.F:                                        cblk(lcell,vmgai) + cblk(lcell,vcaai) + cblk(lcell,vkai) ) )
+./chem/module_made_soa2.F:                   mgai,mgaj,caai,caaj,kai,kaj,                      &
+./chem/module_made_soa2.F:                              mgai,mgaj,caai,caaj,kai,kaj
+./chem/module_made_soa2.F:          mgai(i,k,j)  = 10.E-05
+./chem/module_made_soa2.F:          mgai(i,k,j)  = 10.E-05
+./chem/module_made_soa2.F:             m3nuc=m3nuc + mgfac*mgai(i,k,j) + cafac*caai(i,k,j) + kfac*kai(i,k,j)
+./chem/module_made_soa2.F:                          mgai,mgaj,caai,caaj,kai,kaj,                             &
+./chem/module_made_soa2.F:       INTENT(INOUT ) ::   mgai,mgaj,caai,caaj,kai,kaj
+./chem/module_made_soa2.F:          emit_crustal,do_isorropia,mgai,mgaj,caai,caaj,kai,kaj, &
+./chem/module_made_soa2.F:     emit_crustal,do_isorropia,mgai,mgaj,caai,caaj,kai,kaj,             &
+./chem/module_made_soa2.F:         INTENT(INOUT ) ::   mgai,mgaj,caai,caaj,kai,kaj
+./chem/module_made_soa2.F:       mgai(i,k,j)        = mgai(i,k,j) +         &
+./chem/chem_driver.f90:          mgai,mgaj,caai,caaj,kai,kaj,                              & 
+./chem/chem_driver.f90:            INTENT(IN ) :: h2oaj,h2oai,mgai,mgaj,caai,caaj,kai,kaj
+./chem/chem_driver.f90:              grid%mgai,grid%mgaj,grid%caai,grid%caaj,grid%kai,grid%kaj,                   &
+./chem/chem_driver.f90:                 grid%mgai,grid%mgaj,grid%caai,grid%caaj,grid%kai,grid%kaj,           &
+./chem/module_data_soa2.f90:      INTEGER, PARAMETER ::  vmgai=    79
+./chem/module_gocart_dust_afwa.F:         mgai,mgaj,caai,caaj,kai,kaj,                                      &
+./chem/module_gocart_dust_afwa.F:         INTENT(INOUT ) ::            mgai,mgaj,caai,caaj,kai,kaj
+./chem/module_gocart_dust_afwa.F:                  mgai(i,kts,j) = mgai(i,kts,j)        &
+./chem/module_made_soa2.f90:                             mgai,mgaj,caai,caaj,kai,kaj,          &
+./chem/module_made_soa2.f90:                            mgai,mgaj,caai,caaj,kai,kaj           
+./chem/module_made_soa2.f90:        cblk(1,vmgai) = mgai(i,k,j) 
+./chem/module_made_soa2.f90:        mgai(i,k,j) = cblk(1,vmgai)
+./chem/module_made_soa2.f90:                         mgai,mgaj,caai,caaj,kai,kaj,                &
+./chem/module_made_soa2.f90:         INTENT(IN ) :: alt,h2oaj,h2oai,mgai,mgaj,caai,caaj,kai,kaj
+./chem/module_made_soa2.f90:                               mgai(ii,k,jj) + mgaj(ii,k,jj) +                                caai(ii,k,jj) + caaj(ii,k,jj) +                                 kai(ii,k,jj) +  kaj(ii,k,jj)
+./chem/module_made_soa2.f90:                               mgai,mgaj,caai,caaj,kai,kaj,                    &
+./chem/module_made_soa2.f90:                             mgai,mgaj,caai,caaj,kai,kaj
+./chem/module_made_soa2.f90:         cblk(1,VMGAI ) =   max(epsilc,mgai(i,k,j)*convfac2)
+./chem/module_made_soa2.f90:    cblk(lcell,vmgaj) = cblk(lcell,vmgaj) + cblk(lcell,vmgai)*fm3
+./chem/module_made_soa2.f90:          cblk(lcell,vmgai) = cblk(lcell,vmgai)*phm3
+./chem/module_made_soa2.f90:        WI(8) = DBLE((cblk(lcell,vmgaj)  + cblk(lcell,vmgai)) &
+./chem/module_made_soa2.f90:        cblk(lcell,vmgai) = fraci*amg
+./chem/module_made_soa2.f90:          mgfac*cblk(lcell,vmgai) + cafac*cblk(lcell,vcaai) + kfac*cblk(lcell,vkai)
+./chem/module_made_soa2.f90:                                        cblk(lcell,vmgai) + cblk(lcell,vcaai) + cblk(lcell,vkai) ) )
+./chem/module_made_soa2.f90:                   mgai,mgaj,caai,caaj,kai,kaj,                      &
+./chem/module_made_soa2.f90:                              mgai,mgaj,caai,caaj,kai,kaj
+./chem/module_made_soa2.f90:          mgai(i,k,j)  = 10.E-05
+./chem/module_made_soa2.f90:          mgai(i,k,j)  = 10.E-05
+./chem/module_made_soa2.f90:             m3nuc=m3nuc + mgfac*mgai(i,k,j) + cafac*caai(i,k,j) + kfac*kai(i,k,j)
+./chem/module_made_soa2.f90:                          mgai,mgaj,caai,caaj,kai,kaj,                             &
+./chem/module_made_soa2.f90:       INTENT(INOUT ) ::   mgai,mgaj,caai,caaj,kai,kaj
+./chem/module_made_soa2.f90:          emit_crustal,do_isorropia,mgai,mgaj,caai,caaj,kai,kaj, &
+./chem/module_made_soa2.f90:     emit_crustal,do_isorropia,mgai,mgaj,caai,caaj,kai,kaj,             &
+./chem/module_made_soa2.f90:         INTENT(INOUT ) ::   mgai,mgaj,caai,caaj,kai,kaj
+./chem/module_made_soa2.f90:       mgai(i,k,j)        = mgai(i,k,j) +         &
+./chem/dry_dep_driver.f90:               mgai,mgaj,caai,caaj,kai,kaj,                               &
+./chem/dry_dep_driver.f90:               mgai,mgaj,caai,caaj,kai,kaj    
+./chem/dry_dep_driver.f90:               mgai,mgaj,caai,caaj,kai,kaj,                             &
+./chem/module_data_soa_vbs_het.f90:                INTEGER vmgai
+./chem/module_data_soa_vbs_het.f90:                PARAMETER (vmgai=36)
+./chem/aerosol_driver.f90:           mgai,mgaj,caai,caaj,kai,kaj,                             &
+./chem/aerosol_driver.f90:                   mgai,mgaj,caai,caaj,kai,kaj,           &
+./chem/aerosol_driver.f90:             mgai,mgaj,caai,caaj,kai,kaj,                              &
+./chem/aerosol_driver.f90:         INTENT(IN ) :: h2oaj,h2oai,mgai,mgaj,caai,caaj,kai,kaj
+./chem/aerosol_driver.f90:            mgai,mgaj,caai,caaj,kai,kaj,                               &
+./chem/module_aerosols_soa_vbs_het.f90:                cblk(1,vmgai) = chem(i,k,j,p_mgai)
+./chem/module_aerosols_soa_vbs_het.f90:                chem(i,k,j,p_mgai) = cblk(1,vmgai)
+./chem/module_aerosols_soa_vbs_het.f90:      if (p_mgai >= param_first_scalar) &
+./chem/module_aerosols_soa_vbs_het.f90:         cblk(1,VMGAI ) =   max(epsilc,chem(i,k,j,p_mgai)*convfac2)
+./chem/module_aerosols_soa_vbs_het.f90:        if (p_mgai >= param_first_scalar) VGSA(i, j, VMGAI )  =  VGSA(i,j,VSO4AI )
+./chem/module_aerosols_soa_vbs_het.f90:        cblk(lcell,vmgaj) = cblk(lcell,vmgaj) + cblk(lcell,vmgai)*fm3
+./chem/module_aerosols_soa_vbs_het.f90:                  cblk(lcell,vmgai) = cblk(lcell,vmgai)*phm3
+./chem/module_aerosols_soa_vbs_het.f90:        WI(8) = DBLE((cblk(lcell,vmgaj)  + cblk(lcell,vmgai)) &
+./chem/module_aerosols_soa_vbs_het.f90:        cblk(lcell,vmgai) = fraci*amg
+./chem/module_aerosols_soa_vbs_het.f90:                  mgfac*cblk(lcell,vmgai)+ &
+./chem/module_aerosols_soa_vbs_het.f90:                  +cblk(lcell,vmgai)))
+./chem/module_aerosols_soa_vbs_het.f90:          chem(i,k,j,p_mgai
